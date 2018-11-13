@@ -1,2 +1,2 @@
-# frontend-developer-handbook
-ZEIT ONLINE Frontend Developer Handbook
+# ZEIT ONLINE Frontend Developer Handbook
+
