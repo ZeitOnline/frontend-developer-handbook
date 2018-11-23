@@ -1,15 +1,14 @@
 # ZEIT ONLINE CSS Coding Guidelines
 
 ## Definition
-```css
-.block {
-    margin: 0;
-}
+```sass
+.block
+    margin: 0
 ```
 
-- The above mentioned code example covers one **css rule** or **ruleset**.
+- The above mentioned code example covers one **sass rule** or **ruleset**.
 - `.block` in this case is the **selector**.
-- `margin: 0;` is a **declaration**,
+- `margin: 0` is a **declaration**,
 - where `margin` is the property
 - and `0` is the value.
 
@@ -33,7 +32,6 @@ Remove trailing whitespace (i.e. tell your text editor to do so automatically). 
 - Quote attribute values in selectors, e.g., `input[type="checkbox"]`.
 - *Where allowed*, avoid specifying units for zero-values, e.g., `margin: 0`.
 - Include a space after each comma in comma-separated property or function values.
-- Include a semi-colon at the end of the last declaration in a declaration block.
 - Place the closing brace of a ruleset in the same column as the first character of the ruleset.
 - Separate each ruleset by a blank line.
 
@@ -48,15 +46,14 @@ Declarations should be alphabetically ordered.
 
 ## Exceptions
 Long, comma-separated property values - such as collections of gradients or shadows - can be arranged across multiple lines in an effort to improve readability and produce more useful diffs. There are various formats that could be used; one example is shown below.
-```css
-.selector {
+```sass
+.selector
     background-image:
         linear-gradient(#fff, #ccc),
-        linear-gradient(#f3c, #4ec);
+        linear-gradient(#f3c, #4ec)
     box-shadow:
         1px 1px 1px #000,
-        2px 2px 1px 1px #ccc inset;
-}
+        2px 2px 1px 1px #ccc inset
 ```
 
 ## Naming convention
@@ -64,17 +61,17 @@ The overall used naming convention used on ZON webpages should be following the 
 
 ### Naming Pattern
 The naming convention follows this pattern:
-```css
-.block {}
-.block__element {}
-.block--modifier {}
+```sass
+.block
+.block__element
+.block--modifier
 ```
 
 - `.block` represents the higher level of an abstraction or component.
 - `.block__element` represents a descendent of .block that helps form .block as a whole.
 - `.block--modifier` represents a different state or version of .block.
 
-The double underscores and hyphens are used cause block, element or modifier themselves can contain single hyphens or underscores.
+The double underscores and hyphens are used because block, element or modifier themselves can contain single hyphens or underscores.
 
 ### HTML Example
 A typical HTML construct following this convention looks like this:
@@ -85,7 +82,7 @@ A typical HTML construct following this convention looks like this:
 </form>
 ```
 
-While `.block` and `.block__element` can be assign to elements seperately, `.block--modifier` is always used together with the element it modifies. In this case `site-search  site-search--full`. The modifier css rule may only contain *additional* declarations.
+While `.block` and `.block__element` can be assigned to elements seperately, `.block--modifier` is always used together with the element it modifies. In this case `site-search  site-search--full`. The modifier css rule may only contain *additional* declarations.
 
 ### No IDs
 You must not use any `#id` as a selector.
@@ -113,34 +110,35 @@ To keep up code readability and to avoid *specificity war*, do not nest Sass/SCS
 ### Additional preprocessor specific rules
 - Do not write vendor-prefixes directly into the code, use `@mixin`.
 - Do not put styles into the global and section-specific sass files. Just list imported sass files and partials there.
-    + list vendor/global dependancies first, then author dependancies, then patterns, then parts
+    + list vendor/global dependancies first, then author dependencies, then patterns, then parts
     + as these files act like a table of content, comment them appropriate
     + do not put styles in there
 - Partials are named with a leading underscore, like `_partial.sass`
 - Variablize all common numbers, and numbers with meaning
 - Variablize all colors, avoid using literal colors, encourage semantic color mappings 
+- As the amount of font variables rose, we omitted all font-variables.
 - Use hyphenated-variable-names (no camelCase or snake_case)
 - For naming, use the [general-to-specific](http://webdesign.tutsplus.com/tutorials/quick-tip-name-your-sass-variables-modularly--webdesign-13364) approach when appropriate
 - Name your media-queries
 
-```scss
+```sass
 /**
  * Examples
  */
 
 // literal colors
-$black: black;
-$grey: #808080;
-$red: #e02020;
+$black: black !default
+$grey: #808080 !default
+$red: #e02020 !default
 
 // semantic color mappings
-$primary-color: $black;
-$accent-color: $grey;
-$alert-color: $red;
-$link-color: $red;
+$primary-color: $black
+$accent-color: $grey
+$alert-color: $red
+$link-color: $red
 
 // usage
-$comments-color-text: $primary-color;
-$comments-color-link: $link-color;
-$comments-bg: $accent-color;
+$comments-color-text: $primary-color
+$comments-color-link: $link-color
+$comments-bg: $accent-color
 ```
