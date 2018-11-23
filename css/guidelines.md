@@ -110,6 +110,10 @@ You might want to make the call on separating user-authored @includes and vendor
 To keep up code readability and to avoid *specificity war*, do not nest Sass/SCSS code more than three levels deep.
 
 
+### Rules
+`border-width` should have pixel values always. Use `2px solid black` instead of `0.125rem solid black`. We do not want subpixel border width.
+
+
 ### Additional preprocessor specific rules
 - Do not write vendor-prefixes directly into the code, use `@mixin`.
 - Do not put styles into the global and section-specific sass files. Just list imported sass files and partials there.
