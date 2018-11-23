@@ -110,7 +110,7 @@ To keep up code readability and to avoid *specificity war*, do not nest Sass/SCS
 ### Additional preprocessor specific rules
 - Do not write vendor-prefixes directly into the code, use `@mixin`.
 - Do not put styles into the global and section-specific sass files. Just list imported sass files and partials there.
-    + list vendor/global dependancies first, then author dependencies, then patterns, then parts
+    + list vendor/global dependencies first, then author dependencies, then patterns, then parts
     + as these files act like a table of content, comment them appropriate
     + do not put styles in there
 - Partials are named with a leading underscore, like `_partial.sass`
