@@ -1,4 +1,4 @@
-# ZEIT ONLINE CSS Coding Guidelines
+# ZEIT ONLINE SASS Coding Guidelines
 
 ## Definition
 ```sass
