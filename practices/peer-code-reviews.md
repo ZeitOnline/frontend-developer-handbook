@@ -62,8 +62,6 @@ Do some _destructive tests_ with overly long texts, wrong typed user input, miss
 ### Test for accessibility
 Are the a11y tests written? Test the code with a11y plug-ins in the browser. Test with at least with _Voice Over_ and look for semantic markup and WAI-ARIA landmarks and attributes if needed. How does the module behave when we change font-size on the user side or when high contrast mode is activated? Test all this in a mobile and desktop environment.
 
-  > Anmerkung: wollen wir a11y abkürzen oder ausschreiben?
-
 ### Test for performance
 Does the code lower the overall performance of the webpage? What could be done to perform better, where can things be spared or omitted, which tactics regarding dom access, page re-/rendering and file loading can be used? Are all best practices considered?
 
