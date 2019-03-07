@@ -26,11 +26,10 @@ Another great tool is the [Nu Html Checker from the W3C](https://validator.w3.or
 
 The HTML Checker provides [two kinds of outline](https://validator.w3.org/nu/?showoutline=yes&doc=https%3A%2F%2Fwww.zeit.de%2Findex), which perfectly illustrates the dilemma mentioned above: 
 
-heading level outline 
-  - https://www.dropbox.com/s/4c9bpfp7uekwxlt/Screenshot%202019-02-08%2014.14.09.png?dl=0
 
-structural document outline
-  - https://www.dropbox.com/s/4c9bpfp7uekwxlt/Screenshot%202019-02-08%2014.14.09.png?dl=0
+![heading level outline](./images/document-outline/w3c-outline-example-headings.png)
+
+![structural document outline](./images/document-outline/w3c-outline-example-structure.png)
 
 
 READ: http://html5doctor.com/computer-says-no-to-html5-document-outline/
@@ -42,7 +41,6 @@ READ: https://medium.com/@Heydon/managing-heading-levels-in-design-systems-18be9
 
 ### 1) Use correct container tags
 
-https://github.com/ZeitOnline/zeit.web/pull/3049
 
 ```<div>
     <h2>Meistgelesene Artikel</h2>
@@ -53,7 +51,7 @@ https://github.com/ZeitOnline/zeit.web/pull/3049
     </ol>
 </div>
 ```
-https://www.dropbox.com/s/k00160vi5qknebi/Screenshot%202018-12-03%2017.38.12.png?dl=0
+![](./images/document-outline/containertag-section-before.png)
 
 ```<section>
   <h2>Meistgelesene Artikel</h2>
@@ -64,14 +62,14 @@ https://www.dropbox.com/s/k00160vi5qknebi/Screenshot%202018-12-03%2017.38.12.png
   </ol>
 </section>
 ```
-https://www.dropbox.com/s/i5dd5blsejjigvb/Screenshot%202018-12-03%2017.39.03.png?dl=0
+![](./images/document-outline/containertag-section-after.png)
 
 By using a `section` instead of a `div` we opened a new outline scope/nesting and made clear that the headline type actually represents a hierarchy. (TODO: ist das wirklich die richtige Erklärung?)
 
 
 In another case, we changed the container tag the other way around: from `section` to `div`. A teaser box which was defined as `section` also had a `section` as wrapper, which resulted from our CMS structure and the way centerpages are built. These two nested sections were reflected in the document outline, with one superficial level:
 
-Vorher: https://www.dropbox.com/s/iiymjjwsiwevy9u/Screenshot%202019-02-08%2013.52.13.png?dl=0
+![](./images/document-outline/containertag-flatten-before.png)
 
 ```<div>
     <section>
@@ -88,7 +86,7 @@ Vorher: https://www.dropbox.com/s/iiymjjwsiwevy9u/Screenshot%202019-02-08%2013.5
 
 By changing one container from `section` to `div`, we could flatten the outline hierarchy. 
 
-Nachher: https://www.dropbox.com/s/iziqu0xdxsch9cr/Screenshot%202019-02-08%2013.51.21.png?dl=0
+![](./images/document-outline/containertag-flatten-after.png)
 
 You will notice that the section is still untitled. This is because the included teasers are of the same hierarchy, and there is no element which can be used as title.
 
@@ -97,15 +95,17 @@ While the flattening surely made the outline a bit better, there is still [room 
 
 ### 2) Promote relevant text nodes
 
-By assigning headline status to text nodes which do not look like headlines (in our case descriptions of products in our shop https://www.dropbox.com/s/co2zipld14yx202/Screenshot%202019-02-08%2014.21.15.png?dl=0), these nodes get respected as the elements title in the document outline.
+By assigning headline status to text nodes which do not look like headlines (in our case descriptions of products in our shop, these nodes get respected as the elements title in the document outline.
+
+![](./images/document-outline/shop-screenshot.png)
 
 before:
 ```<p class="shopitem__text">{{ teaser.teaserText }}</p>```
-https://www.dropbox.com/s/fuzsl4p4jv500ae/Screenshot%202019-02-08%2014.20.10.png?dl=0
+![](./images/document-outline/shop-title-paragraph.png)
 
 after:
 ```<h3 class="shopitem__text">{{ teaser.teaserText }}</h3>```
-https://www.dropbox.com/s/m827vszvoch6xjd/Screenshot%202019-02-08%2014.19.15.png?dl=0
+![](./images/document-outline/shop-title-headline.png)
 
 By the way, these changes are easily done because we use BEM as our CSS system. (TODO:LINK) 
 
@@ -113,8 +113,11 @@ By the way, these changes are easily done because we use BEM as our CSS system. 
 ## how we can improve more
 
 
-- We still have untitled sections https://www.dropbox.com/s/avfb50r30vpsv9k/Screenshot%202019-02-08%2013.46.40.png?dl=0
-- Some things should be hidden from the outline (or even the DOM) https://www.dropbox.com/s/pspcz3fj9a3dcox/Screenshot%202019-02-08%2013.47.19.png?dl=0
+* We still have untitled sections 
+![](./images/document-outline/improvement-untitled-sections.png)
+
+* Some things should be hidden from the outline (or even the DOM) 
+![](./images/document-outline/improvement-reloadbox.png)
 
 
 ## Resources
