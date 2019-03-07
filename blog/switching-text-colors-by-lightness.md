@@ -64,12 +64,10 @@ def test_podcast_leader_dark_is_accessable(selenium_driver):
 
 Based on the CSS-Tricks method there is a codepen to demonstrate the outcome:
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="codecandies" data-slug-hash="QYQLZb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="CSS Automatic WCAG contrast font-color depending on element background ">
-  <span>See the Pen <a href="https://codepen.io/codecandies/pen/QYQLZb/">
-  CSS Automatic WCAG contrast font-color depending on element background </a> by Nico Brünjes (<a href="https://codepen.io/codecandies">@codecandies</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<iframe height="265" style="width: 100%;" scrolling="no" title="CSS Automatic WCAG contrast font-color depending on element background " src="//codepen.io/codecandies/embed/QYQLZb/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/codecandies/pen/QYQLZb/'>CSS Automatic WCAG contrast font-color depending on element background </a> by Nico Brünjes
+  (<a href='https://codepen.io/codecandies'>@codecandies</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 
 ## Resources
@@ -80,3 +78,6 @@ Based on the CSS-Tricks method there is a codepen to demonstrate the outcome:
 ### Tools
 - [axe-selenium-python](https://github.com/mozilla-services/axe-selenium-python)
 - [pytest](https://docs.pytest.org/en/latest/)
+
+
+_Written 2019-03-07, Nico Brünjes_
