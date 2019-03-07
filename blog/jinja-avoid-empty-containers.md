@@ -57,13 +57,27 @@ Jinja2 introduced a new feature in version 2.8: set blocks. We know the old trad
 {%- endset %}
 
 {% if teaser_metadata | length %}
-   <div class="metadata">
-        {{ teaser_metadata }}
-    </div>
+  <div class="metadata">
+    {{ teaser_metadata }}
+  </div>
 {% endif %}
 ```
 
 This way, the wrapper div only gets printed if it actually has content. Each part of this content is responsible for their own output. Included subtemplates (`{% include 'byline.html' %}`) and macros (`{{ macro.include_datetime(teaser) }}`) do also avoid rendering empty blocks – and might use Jinjas `set block` method for that.
+
+You can do the same check for blocks as well, but I prefer the cleaner way of having variables.
+
+```
+{% block teaser_metadata %}
+...
+{% endblock %}
+
+{% if self.teaser_metadata() | trim %}
+  <div class="metadata">
+    {{ self.teaser_metadata() }}
+  </div>
+{% endif %}
+```
 
 
 ## Resources
