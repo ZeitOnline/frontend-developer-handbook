@@ -1,15 +1,12 @@
 # Small Wins: Improving our Document Outline
 
-The document outline is 
+The document outline is a way to overview and navigate a web page. It provides a high-level overview on a page, and is mostly used by screen readers to provide meaning and allow navigation for people who cannot access the visual representation of the page. At ZEIT Online we actively shape this outline, on order to improve the accessibility of our news website. This post shows some practical examples of that process.
 
-["das Inhaltsverzeichnis ist ein Verzeichnis des Inhalts !??"]
-
-
-## what is an document outline?
+## what is the document outline?
 
 The document outline represents the logical or semantical structure of an HTML document. This is a little difficult, because there are two concepts: hierarchy of headlines `h1` to `h6` and the nested structure of `sections` and `divs`. 
 
-That whole topic is a [big dilemma](https://css-tricks.com/document-outline-dilemma/), but nevertheless we can try to improve our sites 
+That whole topic is a [big dilemma](https://css-tricks.com/document-outline-dilemma/), but nevertheless we can try to improve our sites in order to explain the sites structure to people (or machines) who cannot access the visible representation.
 
 That's what we did recently with our homepage on [www.zeit.de](https://www.zeit.de/index).
 
@@ -26,23 +23,19 @@ Another great tool is the [Nu Html Checker from the W3C](https://validator.w3.or
 
 The HTML Checker provides [two kinds of outline](https://validator.w3.org/nu/?showoutline=yes&doc=https%3A%2F%2Fwww.zeit.de%2Findex), which perfectly illustrates the dilemma mentioned above: 
 
-
 ![heading level outline](./images/document-outline/w3c-outline-example-headings.png)
 
 ![structural document outline](./images/document-outline/w3c-outline-example-structure.png)
-
-
-READ: http://html5doctor.com/computer-says-no-to-html5-document-outline/
-READ: https://medium.com/@Heydon/managing-heading-levels-in-design-systems-18be9a746fa3
-
 
 
 ## how we improved
 
 ### 1) Use correct container tags
 
+The type HTML tags that we use directly shapes the document structure. While `divs` are just containers for styling purpose, the `section` and `article` HTML5 tags actually provide meaning and structure.
 
-```<div>
+```
+<div>
     <h2>Meistgelesene Artikel</h2>
     <ol>
       <li><article><h3>Teaser 1</h3></article></li>
@@ -53,7 +46,8 @@ READ: https://medium.com/@Heydon/managing-heading-levels-in-design-systems-18be9
 ```
 ![](./images/document-outline/containertag-section-before.png)
 
-```<section>
+```
+<section>
   <h2>Meistgelesene Artikel</h2>
   <ol>
     <li><article><h3>Teaser 1</h3></article></li>
@@ -64,14 +58,14 @@ READ: https://medium.com/@Heydon/managing-heading-levels-in-design-systems-18be9
 ```
 ![](./images/document-outline/containertag-section-after.png)
 
-By using a `section` instead of a `div` we opened a new outline scope/nesting and made clear that the headline type actually represents a hierarchy. (TODO: ist das wirklich die richtige Erklärung?)
-
+By using a `section` instead of a `div` we opened a new outline scope/nesting and made clear that the headline type actually represents a hierarchy. 
 
 In another case, we changed the container tag the other way around: from `section` to `div`. A teaser box which was defined as `section` also had a `section` as wrapper, which resulted from our CMS structure and the way centerpages are built. These two nested sections were reflected in the document outline, with one superficial level:
 
 ![](./images/document-outline/containertag-flatten-before.png)
 
-```<div>
+```
+<div>
     <section>
       <section> <!-- this was changed to div -->
         <article><h3>Teaser 1</h3></article>
@@ -88,9 +82,9 @@ By changing one container from `section` to `div`, we could flatten the outline 
 
 ![](./images/document-outline/containertag-flatten-after.png)
 
-You will notice that the section is still untitled. This is because the included teasers are of the same hierarchy, and there is no element which can be used as title.
+You will notice that the section is still untitled. This is because the included teasers are of the same hierarchy, and currently there is no element which can be used as title.
 
-While the flattening surely made the outline a bit better, there is still [room for improvement](TODO:Link_zu_dem_Abschnitt).
+While the flattening surely made the outline a bit better, there is still [room for improvement](#how-we-can-improve-more).
 
 
 ### 2) Promote relevant text nodes
@@ -107,7 +101,7 @@ after:
 ```<h3 class="shopitem__text">{{ teaser.teaserText }}</h3>```
 ![](./images/document-outline/shop-title-headline.png)
 
-By the way, these changes are easily done because we use BEM as our CSS system. (TODO:LINK) 
+By the way, these changes are easily done because we use [BEM](https://blog.zeit.de/dev/block-element-modifier/) as our CSS system.
 
 
 ## how we can improve more
@@ -125,6 +119,9 @@ By the way, these changes are easily done because we use BEM as our CSS system. 
 ### Articles
 
 - https://css-tricks.com/document-outline-dilemma/
+- http://html5doctor.com/computer-says-no-to-html5-document-outline/
+- https://medium.com/@Heydon/managing-heading-levels-in-design-systems-18be9a746fa3
+
 
 ### Tools
 
@@ -132,4 +129,4 @@ By the way, these changes are easily done because we use BEM as our CSS system. 
 
 
 
-__Written 2019-02-09 by [Thomas Puppe](TODO:Authorpage)__
+__Written 2019-03-07 by Thomas Puppe__
