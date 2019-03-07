@@ -62,12 +62,7 @@ def test_podcast_leader_dark_is_accessable(selenium_driver):
     assert len(result.get('violations')) == 0
 ```
 
-Based on the CSS-Tricks method there is a codepen to demonstrate the outcome:
-
-<iframe height="265" style="width: 100%;" scrolling="no" title="CSS Automatic WCAG contrast font-color depending on element background " src="//codepen.io/codecandies/embed/QYQLZb/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/codecandies/pen/QYQLZb/'>CSS Automatic WCAG contrast font-color depending on element background </a> by Nico Brünjes
-  (<a href='https://codepen.io/codecandies'>@codecandies</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+Based on the CSS-Tricks method there is [a codepen](https://codepen.io/codecandies/pen/QYQLZb/) to demonstrate the outcome.
 
 
 ## Resources
