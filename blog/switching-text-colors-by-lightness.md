@@ -1,8 +1,8 @@
 # Switching text colors in subject to its background color lightness
 
-Sometimes you build a feature with the feeling, there is something that can go wrong afterwards. In this case we build a feature where the user could decide more or less about the background color of a part of the website. This poses in our thinking a threat to the accessibility of the foreground text, falling behind in contrast in the best case, being completely unreadable in the worst case. No user would certainly choose a black background with black text on it, but what about some of the so loved shades of gray? So… we looked for a solution to more or less change text colors automatically.
+Sometimes you build a feature with the feeling, there is something that can go wrong afterwards. In this case we built a CMS feature where the editor could decide more or less about the background color of a part of the website. This poses in our thinking a threat to the accessibility of the foreground text, falling behind in contrast in the best case, being completely unreadable in the worst case. No user would certainly choose a black background with black text on it, but what about some of the so loved shades of gray? So… we looked for a solution to change text colors automatically.
 
-What we found was [Switch font color for different backgrounds with CSS](https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/) over at CSS-Tricks, which uses css variables (and a css math coding trick from hell to achieve conditional statements) to change text colors in subject to its background. But it also led to the [Techniques For Accessibility Evaluation And Repair Tools Working Draft](https://www.w3.org/TR/AERT/#color-contrast) of the W3C, which includes an equation to estimate _perceived lightness_ of colors.
+What we found was [Switch font color for different backgrounds with CSS](https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/) over at CSS-Tricks, which uses css variables (and a css math coding trick from hell to achieve conditional statements) to change text colors in subject to its background. But the article also led to the [Techniques For Accessibility Evaluation And Repair Tools Working Draft](https://www.w3.org/TR/AERT/#color-contrast) of the W3C, which includes an equation to estimate _perceived lightness_ of colors.
 
 ```
 L = (red * 0.299 + green * 0.587 + blue * 0.114) / 255
@@ -10,7 +10,7 @@ L = (red * 0.299 + green * 0.587 + blue * 0.114) / 255
 
 If you put the red, green and blue parts of a color value into the equation you will get a value between 0 and 1, where 0 is perceived as an absolute dark color (black). I would not question the math behind this. All what's left to do is to set a threshold value, from which one we think of a color as so dark, that we need to change the foreground color.
 
-This can be certainly achieved with css variables (and the conditional css trick mentioned before) but as we have a broad variety of browser we need to support that certainly not [support](https://caniuse.com/#feat=css-variables) css custom properties yet, we decided to put the equation into a template function of our pythonic template engine [jinja2](http://jinja.pocoo.org/).
+This can be certainly achieved with css variables (and the conditional css trick mentioned before) but as we have a broad variety of browsers we need to support that certainly not [support](https://caniuse.com/#feat=css-variables) css custom properties yet, we decided to put the equation into a template function of our pythonic template engine [jinja2](http://jinja.pocoo.org/).
 
 ```py
 import colorsys
@@ -67,7 +67,7 @@ Based on the CSS-Tricks method there is [a codepen](https://codepen.io/codecandi
 
 ## Resources
 ### Articles
-- Switch font color for different backgrounds with CSS](https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/)
+- [Switch font color for different backgrounds with CSS](https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/)
 ### Webstandards
 - [Techniques For Accessibility Evaluation And Repair Tools Working Draft](https://www.w3.org/TR/AERT/#color-contrast)
 ### Tools
