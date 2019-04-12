@@ -33,13 +33,13 @@ def color_is_dark(hexcolor):
 
 If the color is defined as dark (lower than 0.6) we add a modifier class to the teaser to change colors of the content:
 
-```Jinja
+{% raw %}
 {% block teaser_modifier -%}
     {% if teaser.serie.color -%}
         {{ 'teaser--light-text' if teaser.serie.color | color_is_dark }}
     {%- endif %}
 {%- endblock %}
-```
+{% endraw %}
 
 In the CSS we change now text colors based on the background color, from dark gray on light backgrounds to white on dark backgrounds. For testing purposes we put two versions of the feature on a test page one with light and one with dark background and do a11y tests on them with [axe](https://github.com/mozilla-services/axe-selenium-python) and [Selenium](https://selenium-python.readthedocs.io/) (we use [pytest](https://docs.pytest.org/en/latest/) for these things).
 
