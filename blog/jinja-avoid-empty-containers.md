@@ -72,7 +72,7 @@ and of defining a block this way:
 {% endraw %}
 
 This way, the wrapper div only gets printed if it actually has content. Each part of this content is responsible for their own output. Included subtemplates (
-{% raw %)
+{% raw %}
 {% include 'byline.html' %}
 {% endraw %}
 ) and macros (
