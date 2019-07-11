@@ -45,7 +45,7 @@ We can do better:
 
 ## The good solution: set blocks
 
-Jinja2 introduced a new feature in version 2.8: set blocks. We know the old traditional way of defining a variable via set `{% set foo = 'bar' %}` and of defining a block this way: `{% block foo %}bar{% block %}`. Even though version 2.8 was released in 2016, I have not been aware of the possibility to define (set) variables in the block style.
+Jinja2 introduced a new feature in version 2.8: set blocks. We know the old traditional way of defining a variable via set {% raw %}{% set foo = 'bar' %}{% endraw %} and of defining a block this way: {% raw %}{% block foo %}bar{% block %}{% endraw %}. Even though version 2.8 was released in 2016, I have not been aware of the possibility to define (set) variables in the block style.
 
 {% raw %}
 {%- set teaser_metadata | trim -%}
@@ -63,7 +63,7 @@ Jinja2 introduced a new feature in version 2.8: set blocks. We know the old trad
 {% endif %}
 {% endraw %}
 
-This way, the wrapper div only gets printed if it actually has content. Each part of this content is responsible for their own output. Included subtemplates (`{% include 'byline.html' %}`) and macros (`{{ macro.include_datetime(teaser) }}`) do also avoid rendering empty blocks – and might use Jinjas `set block` method for that.
+This way, the wrapper div only gets printed if it actually has content. Each part of this content is responsible for their own output. Included subtemplates ({% raw %){% include 'byline.html' %}{% endraw %}) and macros ({% raw %}{{ macro.include_datetime(teaser) }}{% endraw %}) do also avoid rendering empty blocks – and might use Jinjas `set block` method for that.
 
 You can do the same check for blocks as well, but I prefer the cleaner way of having variables.
 
