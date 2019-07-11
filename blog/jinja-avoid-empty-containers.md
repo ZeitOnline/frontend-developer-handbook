@@ -4,7 +4,7 @@ At ZEIT ONLINE, our teasers and articles are composed of many parts like subtemp
 
 ## The problem: empty containers
 
-```
+{% raw %}
 <div class="metadata">
   {% include 'byline.html' %}
   {{ macro.include_datetime(teaser) }}
@@ -12,13 +12,13 @@ At ZEIT ONLINE, our teasers and articles are composed of many parts like subtemp
     <a href="{{ teaser | create_url }}#comments">{{ comments }} Comments</a>
   {% endif %}
 </div>
-```
+{% endraw %}
 
 ## The bad solution: too many conditions
 
 We could define variables which check the individual parts for their content, and respond to that. 
 
-```
+{% raw %}
 {% set teaser_has_author = teaser | get_authors | length %}
 {% set teaser_has_special_format = (teaser.format == 'essay' or teaser.format == 'interview' %}
 {% set byline_has_content = teaser_has_author and teaser_has_special_format %}
@@ -36,7 +36,7 @@ We could define variables which check the individual parts for their content, an
   </div>
 
 {%- endif %}
-```
+{% endraw %}
 
 But this is not elegant, and sometimes even tricky because the outer template does not (and should not) know the inner workings of included subtemplates. Especially if many outer templates include the same part.
 
@@ -47,7 +47,7 @@ We can do better:
 
 Jinja2 introduced a new feature in version 2.8: set blocks. We know the old traditional way of defining a variable via set `{% set foo = 'bar' %}` and of defining a block this way: `{% block foo %}bar{% block %}`. Even though version 2.8 was released in 2016, I have not been aware of the possibility to define (set) variables in the block style.
 
-```
+{% raw %}
 {%- set teaser_metadata | trim -%}
   {% include 'byline.html' %}
   {{ macro.include_datetime(teaser) }}
@@ -61,13 +61,13 @@ Jinja2 introduced a new feature in version 2.8: set blocks. We know the old trad
     {{ teaser_metadata }}
   </div>
 {% endif %}
-```
+{% endraw %}
 
 This way, the wrapper div only gets printed if it actually has content. Each part of this content is responsible for their own output. Included subtemplates (`{% include 'byline.html' %}`) and macros (`{{ macro.include_datetime(teaser) }}`) do also avoid rendering empty blocks – and might use Jinjas `set block` method for that.
 
 You can do the same check for blocks as well, but I prefer the cleaner way of having variables.
 
-```
+{% raw %}
 {% block teaser_metadata %}
 ...
 {% endblock %}
@@ -77,7 +77,7 @@ You can do the same check for blocks as well, but I prefer the cleaner way of ha
     {{ self.teaser_metadata() }}
   </div>
 {% endif %}
-```
+{% endraw %}
 
 
 ## Resources
