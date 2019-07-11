@@ -16,7 +16,7 @@ At ZEIT ONLINE, our teasers and articles are composed of many parts like subtemp
 
 ## The bad solution: too many conditions
 
-We could, of course, define variables which check the individual parts for their content, and respond to that. 
+We could define variables which check the individual parts for their content, and respond to that. 
 
 ```
 {% set teaser_has_author = teaser | get_authors | length %}
