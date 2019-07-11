@@ -4,7 +4,7 @@ At ZEIT ONLINE, our teasers and articles are composed of many parts like subtemp
 
 ## The problem: empty containers
 
-{% highlight %}
+```
 <div class="metadata">
   {% include 'byline.html' %}
   {{ macro.include_datetime(teaser) }}
@@ -12,7 +12,7 @@ At ZEIT ONLINE, our teasers and articles are composed of many parts like subtemp
     <a href="{{ teaser | create_url }}#comments">{{ comments }} Comments</a>
   {% endif %}
 </div>
-{% highlight %}
+```
 
 ## The bad solution: too many conditions
 
