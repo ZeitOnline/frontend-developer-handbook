@@ -1,0 +1,34 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR/../docs
+
+if [[ ! -e Pipfile.lock || Pipfile.lock -nt .pipenv.success ]]; then
+    pipenv install
+    touch .pipenv.success
+fi
+
+COMMAND=${1:-html}
+case $COMMAND in
+    html)
+        pipenv run sphinx-build -b html . htdocs
+    ;;
+    serve)
+        pipenv run sphinx-autobuild -b html . htdocs
+    ;;
+    pdf)
+        pipenv run sphinx-build -b latex . htdocs
+        make -C htdocs all-pdf
+    ;;
+    elasticsearch)
+        pipenv run sphinx-build -b json . htdocs/json
+        pipenv run sphinx-elasticsearch index \
+            --es-url=https://docs.zeit.de:443/elasticsearch/ \
+            --commit=$(git show --no-patch --pretty=format:%H) \
+            --project-name=@@PROJECT-SLUG@@ htdocs/json
+    ;;
+    *)
+        echo "Unrecognized command: $COMMAND"
+        exit 1
+    ;;
+esac

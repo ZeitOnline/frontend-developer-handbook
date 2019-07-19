@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -xe
+
+COMMAND=${1:-test-app}
+case $COMMAND in
+    test-app)
+        # @@ customize for CI, e.g. use junit XML output, etc.pp.
+        bin/test
+    ;;
+    docs)
+        bin/docs html
+        bin/docs elasticsearch
+        ln -sfT ${WORKSPACE}/docs/docs.zeit.de.conf $HOME/nginx.d/@@PROJECT-SLUG@@.conf
+        sudo /etc/init.d/nginx reload
+        exit 0
+    ;;
+    *)
+        echo "Unrecognized command: $COMMAND"
+        exit 1
+    ;;
+esac
