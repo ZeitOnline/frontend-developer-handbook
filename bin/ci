@@ -17,6 +17,7 @@ case $COMMAND in
         git reset --hard origin/gh-pages
         rm -rf ${WORKSPACE}/*
         cp -R /tmp/frontend-developer-handbook/* ${WORKSPACE}
+	touch .nojekyll
         git add .
         git commit -m 'Publish'
         git push
