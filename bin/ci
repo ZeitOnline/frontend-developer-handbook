@@ -4,10 +4,6 @@ set -xe
 
 COMMAND=${1:-test-app}
 case $COMMAND in
-    test-app)
-        # @@ customize for CI, e.g. use junit XML output, etc.pp.
-        bin/test
-    ;;
     docs)
         bin/docs html
         bin/docs elasticsearch
