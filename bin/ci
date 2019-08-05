@@ -16,10 +16,14 @@ case $COMMAND in
         git checkout gh-pages
         git reset --hard origin/gh-pages
         rm -rf ${WORKSPACE}/*
-        mv /tmp/frontend-developer-handbook/* ${WORKSPACE}
+        cp -R /tmp/frontend-developer-handbook/* ${WORKSPACE}
         git add .
         git commit -m 'Publish'
         git push
+
+        git checkout master
+        git reset --hard origin/master
+        mv /tmp/frontend-developer-handbook ${WORKSPACE}/htdocs
 
         exit 0
     ;;
