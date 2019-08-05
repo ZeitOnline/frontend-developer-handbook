@@ -11,8 +11,20 @@ case $COMMAND in
     docs)
         bin/docs html
         bin/docs elasticsearch
-        ln -sfT ${WORKSPACE}/docs/docs.zeit.de.conf $HOME/nginx.d/@@PROJECT-SLUG@@.conf
+        ln -sfT ${WORKSPACE}/docs.zeit.de.conf $HOME/nginx.d/frontend-developer-handbook.conf
         sudo /etc/init.d/nginx reload
+
+        rm -rf /tmp/frontend-developer-handbook
+        mv docs/htdocs /tmp/frontend-developer-handbook
+        git fetch
+        git checkout gh-pages
+        git reset --hard origin/gh-pages
+        rm -rf ${WORKSPACE}/*
+        mv /tmp/frontend-developer-handbook/* ${WORKSPACE}
+        git add .
+        git commit -m 'Publish'
+        git push
+
         exit 0
     ;;
     *)
