@@ -15,7 +15,7 @@ case $COMMAND in
         sudo /etc/init.d/nginx reload
 
         rm -rf /tmp/frontend-developer-handbook
-        mv docs/htdocs /tmp/frontend-developer-handbook
+        mv htdocs /tmp/frontend-developer-handbook
         git fetch
         git checkout gh-pages
         git reset --hard origin/gh-pages
