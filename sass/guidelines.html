@@ -1,0 +1,401 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ZEIT ONLINE SASS Coding Guidelines &mdash; Frontend Developer Handbook  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/zon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How we use and conduct pull requests and peer code reviews" href="../practices/peer-code-reviews.html" />
+    <link rel="prev" title="ZEIT ONLINE JS Coding Guidelines" href="../javascript/guidelines.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+<a href="../readme.html">
+<img src="../_static/zon.png" class="logo" alt="Logo"/>
+ Frontend Developer Handbook
+</a>
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/guidelines.html">Javascript Guidelines</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sass Guidelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#definition">Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notation">Notation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#indentation">Indentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#whitespace">Whitespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#format">Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#special-characters">Special Characters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#declaration-order">Declaration order</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exceptions">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#naming-convention">Naming convention</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#naming-pattern">Naming Pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#html-example">HTML Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#no-ids">No IDs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#preprocessor">Preprocessor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Declaration order</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maximum-nesting">Maximum Nesting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rules">Rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-preprocessor-specific-rules">Additional preprocessor specific rules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../practices/peer-code-reviews.html">Practices</a></li>
+</ul>
+
+            
+          
+
+
+<ul style="margin-top: 2em">
+  <li class="toctree-l1"><a class="reference external" href="https://github.com/ZeitOnline/frontend-developer-handbook/edit/master/docs/sass/guidelines.md" target="_blank">Diese Seite editieren</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../readme.html">Frontend Developer Handbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../readme.html">Docs</a> &raquo;</li>
+        
+      <li>ZEIT ONLINE SASS Coding Guidelines</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/sass/guidelines.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+           <div itemprop="articleBody">
+            
+  <div class="section" id="zeit-online-sass-coding-guidelines">
+<h1>ZEIT ONLINE SASS Coding Guidelines<a class="headerlink" href="#zeit-online-sass-coding-guidelines" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sass notranslate"><div class="highlight"><pre><span></span><span class="nc">.block</span>
+    <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The above mentioned code example covers one <strong>sass rule</strong> or <strong>ruleset</strong>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.block</span></code> in this case is the <strong>selector</strong>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">margin:</span> <span class="pre">0</span></code> is a <strong>declaration</strong>,</p></li>
+<li><p>where <code class="docutils literal notranslate"><span class="pre">margin</span></code> is the property</p></li>
+<li><p>and <code class="docutils literal notranslate"><span class="pre">0</span></code> is the value.</p></li>
+</ul>
+</div>
+<div class="section" id="notation">
+<h2>Notation<a class="headerlink" href="#notation" title="Permalink to this headline">¶</a></h2>
+<p>All classes and ids in the html should be written lowercased. Therefor all selectors should be written lowercased. Also all declarations have to be written in lowercase.</p>
+</div>
+<div class="section" id="indentation">
+<h2>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h2>
+<p>We use tabs for indentation.</p>
+</div>
+<div class="section" id="whitespace">
+<h2>Whitespace<a class="headerlink" href="#whitespace" title="Permalink to this headline">¶</a></h2>
+<p>Remove trailing whitespace (i.e. tell your text editor to do so automatically). Never mix spaces and tabs for <em>indentation</em>.</p>
+</div>
+<div class="section" id="format">
+<h2>Format<a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Use one selector per line in multi-selector rulesets.</p></li>
+<li><p>Include a single space before the opening brace of a ruleset.</p></li>
+<li><p>Include one declaration per line in a declaration block.</p></li>
+<li><p>Use one level of indentation for each declaration.</p></li>
+<li><p>Include a single space after the colon of a declaration.</p></li>
+<li><p>Use lowercase and shorthand hex values, e.g., <code class="docutils literal notranslate"><span class="pre">#aaa</span></code>.</p></li>
+<li><p>Use single or double quotes consistently. Preference is for double quotes, e.g., <code class="docutils literal notranslate"><span class="pre">content:</span> <span class="pre">&quot;&quot;</span></code>.</p></li>
+<li><p>Quote attribute values in selectors, e.g., <code class="docutils literal notranslate"><span class="pre">input[type=&quot;checkbox&quot;]</span></code>.</p></li>
+<li><p><em>Where allowed</em>, avoid specifying units for zero-values, e.g., <code class="docutils literal notranslate"><span class="pre">margin:</span> <span class="pre">0</span></code>.</p></li>
+<li><p>Include a space after each comma in comma-separated property or function values.</p></li>
+<li><p>Place the closing brace of a ruleset in the same column as the first character of the ruleset.</p></li>
+<li><p>Separate each ruleset by a blank line.</p></li>
+</ul>
+</div>
+<div class="section" id="special-characters">
+<h2>Special Characters<a class="headerlink" href="#special-characters" title="Permalink to this headline">¶</a></h2>
+<p>When using unicode character codes, please declare the character itself and a description in a comment on the same line:</p>
+<div class="highlight-sass notranslate"><div class="highlight"><pre><span></span><span class="na">content</span><span class="o">:</span> <span class="s2">&quot;\203A&quot;</span> <span class="c1">// › = single right-pointing angle quotation mark</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="declaration-order">
+<h2>Declaration order<a class="headerlink" href="#declaration-order" title="Permalink to this headline">¶</a></h2>
+<p>Declarations should be alphabetically ordered.</p>
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<p>Long, comma-separated property values - such as collections of gradients or shadows - can be arranged across multiple lines in an effort to improve readability and produce more useful diffs. There are various formats that could be used; one example is shown below.</p>
+<div class="highlight-sass notranslate"><div class="highlight"><pre><span></span><span class="nc">.selector</span>
+    <span class="na">background-image</span><span class="o">:</span>
+        <span class="nt">linear-gradient</span><span class="o">(</span><span class="nn">#fff</span><span class="o">,</span> <span class="nn">#ccc</span><span class="o">),</span>
+        <span class="nt">linear-gradient</span><span class="o">(</span><span class="nn">#f3c</span><span class="o">,</span> <span class="nn">#4ec</span><span class="o">)</span>
+    <span class="na">box-shadow</span><span class="o">:</span>
+        <span class="nt">1px</span> <span class="nt">1px</span> <span class="nt">1px</span> <span class="nn">#000</span><span class="o">,</span>
+        <span class="nt">2px</span> <span class="nt">2px</span> <span class="nt">1px</span> <span class="nt">1px</span> <span class="nn">#ccc</span> <span class="nt">inset</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="naming-convention">
+<h2>Naming convention<a class="headerlink" href="#naming-convention" title="Permalink to this headline">¶</a></h2>
+<p>The overall used naming convention used on ZON webpages should be following the <a class="reference external" href="http://bem.info/">BEM</a> naming scheme. BEM in this case stands for <code class="docutils literal notranslate"><span class="pre">block,</span> <span class="pre">element,</span> <span class="pre">modifier</span></code>, which refers to the the three levels of differentiation this convention uses. If you are not familiar with this naming convention, <a class="reference external" href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">read this article</a> now.</p>
+<div class="section" id="naming-pattern">
+<h3>Naming Pattern<a class="headerlink" href="#naming-pattern" title="Permalink to this headline">¶</a></h3>
+<p>The naming convention follows this pattern:</p>
+<div class="highlight-sass notranslate"><div class="highlight"><pre><span></span><span class="nc">.block</span>
+<span class="nc">.block__element</span>
+<span class="nc">.block--modifier</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.block</span></code> represents the higher level of an abstraction or component.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.block__element</span></code> represents a descendent of .block that helps form .block as a whole.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.block--modifier</span></code> represents a different state or version of .block.</p></li>
+</ul>
+<p>The double underscores and hyphens are used because block, element or modifier themselves can contain single hyphens or underscores.</p>
+</div>
+<div class="section" id="html-example">
+<h3>HTML Example<a class="headerlink" href="#html-example" title="Permalink to this headline">¶</a></h3>
+<p>A typical HTML construct following this convention looks like this:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;site-search  site-search--full&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;site-search__field&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value </span><span class="o">=</span><span class="s">&quot;Search&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;site-search__button&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>While <code class="docutils literal notranslate"><span class="pre">.block</span></code> and <code class="docutils literal notranslate"><span class="pre">.block__element</span></code> can be assigned to elements seperately, <code class="docutils literal notranslate"><span class="pre">.block--modifier</span></code> is always used together with the element it modifies. In this case <code class="docutils literal notranslate"><span class="pre">site-search</span>&#160; <span class="pre">site-search--full</span></code>. The modifier css rule may only contain <em>additional</em> declarations.</p>
+</div>
+<div class="section" id="no-ids">
+<h3>No IDs<a class="headerlink" href="#no-ids" title="Permalink to this headline">¶</a></h3>
+<p>You must not use any <code class="docutils literal notranslate"><span class="pre">#id</span></code> as a selector.</p>
+</div>
+</div>
+<div class="section" id="preprocessor">
+<h2>Preprocessor<a class="headerlink" href="#preprocessor" title="Permalink to this headline">¶</a></h2>
+<p>We assume here that Sass is used as prepocessor. As long they are applicable, all rules that apply to css also apply to the code for css preprocessors.</p>
+<div class="section" id="id1">
+<h3>Declaration order<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>First list <code class="docutils literal notranslate"><span class="pre">&#64;extend</span></code> declaration</p></li>
+<li><p>afterwards list <code class="docutils literal notranslate"><span class="pre">&#64;mixin/&#64;include</span></code> statements</p></li>
+<li><p>then list regular styles</p></li>
+<li><p>at least add nested elements.</p></li>
+</ul>
+<p>We put <code class="docutils literal notranslate"><span class="pre">&#64;mixins</span></code> above regular styles, so we can override specific propertiers defined by a mixin.</p>
+<p>You might want to make the call on separating user-authored &#64;includes and vendor-provided &#64;includes.</p>
+</div>
+<div class="section" id="maximum-nesting">
+<h3>Maximum Nesting<a class="headerlink" href="#maximum-nesting" title="Permalink to this headline">¶</a></h3>
+<p>To keep up code readability and to avoid <em>specificity war</em>, do not nest Sass/SCSS code more than three levels deep.</p>
+</div>
+<div class="section" id="rules">
+<h3>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">border-width</span></code> should have pixel values always. Use <code class="docutils literal notranslate"><span class="pre">2px</span> <span class="pre">solid</span> <span class="pre">black</span></code> instead of <code class="docutils literal notranslate"><span class="pre">0.125rem</span> <span class="pre">solid</span> <span class="pre">black</span></code>. We do not want subpixel border width.</p>
+</div>
+<div class="section" id="additional-preprocessor-specific-rules">
+<h3>Additional preprocessor specific rules<a class="headerlink" href="#additional-preprocessor-specific-rules" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Do not write vendor-prefixes directly into the code, use <code class="docutils literal notranslate"><span class="pre">&#64;mixin</span></code>.</p></li>
+<li><p>Do not put styles into the global and section-specific sass files. Just list imported sass files and partials there.</p>
+<ul>
+<li><p>list vendor/global dependencies first, then author dependencies, then patterns, then parts</p></li>
+<li><p>as these files act like a table of content, comment them appropriate</p></li>
+<li><p>do not put styles in there</p></li>
+</ul>
+</li>
+<li><p>Partials are named with a leading underscore, like <code class="docutils literal notranslate"><span class="pre">_partial.sass</span></code></p></li>
+<li><p>Variablize all common numbers, and numbers with meaning</p></li>
+<li><p>Variablize all colors, avoid using literal colors, encourage semantic color mappings</p></li>
+<li><p>As the amount of font variables rose, we omitted all font-variables.</p></li>
+<li><p>Use hyphenated-variable-names (no camelCase or snake_case)</p></li>
+<li><p>For naming, use the <a class="reference external" href="http://webdesign.tutsplus.com/tutorials/quick-tip-name-your-sass-variables-modularly--webdesign-13364">general-to-specific</a> approach when appropriate</p></li>
+<li><p>Name your media-queries</p></li>
+</ul>
+<div class="highlight-sass notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+ <span class="cm">* Examples</span>
+ <span class="cm">*/</span>
+
+<span class="c1">// literal colors</span>
+<span class="nv">$black</span><span class="o">:</span> <span class="ni">black</span> <span class="nv">!default</span>
+<span class="nv">$grey</span><span class="o">:</span> <span class="mh">#808080</span> <span class="nv">!default</span>
+<span class="nv">$red</span><span class="o">:</span> <span class="mh">#e02020</span> <span class="nv">!default</span>
+
+<span class="c1">// semantic color mappings</span>
+<span class="na">$primary-color</span><span class="o">:</span> <span class="nv">$black</span>
+<span class="na">$accent-color</span><span class="o">:</span> <span class="nv">$grey</span>
+<span class="na">$alert-color</span><span class="o">:</span> <span class="nv">$red</span>
+<span class="na">$link-color</span><span class="o">:</span> <span class="nv">$red</span>
+
+<span class="c1">// usage</span>
+<span class="na">$comments-color-text</span><span class="o">:</span> <span class="nv">$primary-color</span>
+<span class="na">$comments-color-link</span><span class="o">:</span> <span class="nv">$link-color</span>
+<span class="na">$comments-bg</span><span class="o">:</span> <span class="nv">$accent-color</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+
+<iframe src="https://like-button.zeit.de/like" style="width:100px;height:75px;border:none;"></iframe>
+
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../practices/peer-code-reviews.html" class="btn btn-neutral float-right" title="How we use and conduct pull requests and peer code reviews" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../javascript/guidelines.html" class="btn btn-neutral float-left" title="ZEIT ONLINE JS Coding Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright ZEIT ONLINE
+      <span class="lastupdated">
+        Last updated on Aug 05, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
