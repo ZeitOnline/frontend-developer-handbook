@@ -14,7 +14,7 @@ html_theme = "sphinx_zon_theme"
 html_theme_options = {
     'elasticsearch_host': None,
     'elasticsearch_index': 'docs',
-    'like_iframe_src': None,
+    'like_iframe_src': '',
     'editme_link': (
         'https://github.com/ZeitOnline/frontend-developer-handbook/edit/master/docs/{page}')
 }
