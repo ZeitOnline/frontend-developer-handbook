@@ -8,7 +8,7 @@ source_parsers = {
    '.md': 'recommonmark.parser.CommonMarkParser',
 }
 
-master_doc = 'index'
+master_doc = 'readme'
 
 html_theme = "sphinx_zon_theme"
 html_theme_options = {

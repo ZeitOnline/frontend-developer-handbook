@@ -12,7 +12,7 @@ If you put the red, green and blue parts of a color value into the equation you 
 
 This can be certainly achieved with css variables (and the conditional css trick mentioned before) but as we have a broad variety of browsers we need to support that certainly not [support](https://caniuse.com/#feat=css-variables) css custom properties yet, we decided to put the equation into a template function of our pythonic template engine [jinja2](http://jinja.pocoo.org/).
 
-```py
+```python
 import colorsys
 
 def color_is_dark(hexcolor):
@@ -33,7 +33,6 @@ def color_is_dark(hexcolor):
 
 If the color is defined as dark (lower than 0.6) we add a modifier class to the teaser to change colors of the content:
 
-{% raw %}
 ```jinja
 {% block teaser_modifier -%}
     {% if teaser.serie.color -%}
@@ -41,11 +40,10 @@ If the color is defined as dark (lower than 0.6) we add a modifier class to the 
     {%- endif %}
 {%- endblock %}
 ```
-{% endraw %}
 
 In the CSS we change now text colors based on the background color, from dark gray on light backgrounds to white on dark backgrounds. For testing purposes we put two versions of the feature on a test page one with light and one with dark background and do a11y tests on them with [axe](https://github.com/mozilla-services/axe-selenium-python) and [Selenium](https://selenium-python.readthedocs.io/) (we use [pytest](https://docs.pytest.org/en/latest/) for these things).
 
-```py
+```python
 from axe_selenium_python import Axe
 
 def test_podcast_leader_dark_is_accessable(selenium_driver):
@@ -70,8 +68,12 @@ Based on the CSS-Tricks method there is [a codepen](https://codepen.io/codecandi
 ## Resources
 ### Articles
 - [Switch font color for different backgrounds with CSS](https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/)
+
+ 
 ### Webstandards
 - [Techniques For Accessibility Evaluation And Repair Tools Working Draft](https://www.w3.org/TR/AERT/#color-contrast)
+
+
 ### Tools
 - [axe-selenium-python](https://github.com/mozilla-services/axe-selenium-python)
 - [pytest](https://docs.pytest.org/en/latest/)

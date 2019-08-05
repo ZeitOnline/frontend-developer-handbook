@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-cd $DIR/../docs
+cd $DIR/..
 
 if [[ ! -e Pipfile.lock || Pipfile.lock -nt .pipenv.success ]]; then
     pipenv install
