@@ -1,8 +1,18 @@
 # ZEIT ONLINE Frontend Developer Handbook
 
-* [Github Pages Version](https://zeitonline.github.io/frontend-developer-handbook/)
-* [SASS Guidelines](https://zeitonline.github.io/frontend-developer-handbook/sass/guidelines)
-* [JS Guidelines](https://zeitonline.github.io/frontend-developer-handbook/javascript/guidelines)
+Contents
+---------
 
-## Practices
-* [How we use and conduct pull requests and peer code reviews](https://zeitonline.github.io/frontend-developer-handbook/practices/peer-code-reviews)
+* [Blog](blog/index.md)
+* [Javascript Guidelines](javascript/guidelines.md)
+* [Sass Guidelines](sass/guidelines.md)
+* [Practices](practices/peer-code-reviews.md)
+
+
+
+## Set Up
+
+See: [Onboarding](https://github.com/ZeitOnline/docs/blob/master/README.rst#onboarding)
+
+
+* [Github Pages Version](https://zeitonline.github.io/frontend-developer-handbook/)
