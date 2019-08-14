@@ -16,7 +16,7 @@ html_theme_options = {
     'elasticsearch_index': 'docs',
     'like_iframe_src': '',
     'editme_link': (
-        'https://github.com/ZeitOnline/frontend-developer-handbook/edit/master/docs/{page}')
+        'https://github.com/ZeitOnline/frontend-developer-handbook/edit/master/{page}')
 }
 html_last_updated_fmt = '%b %d, %Y'
 
