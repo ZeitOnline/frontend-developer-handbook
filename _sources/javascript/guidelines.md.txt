@@ -21,6 +21,7 @@ if ( bla == foo ) {
   foo( 'bar', 'baz', { zoo: 1 } );
 }
 ```
+
 ## Whitespace Exceptions
 There are some exceptions to the whitespacing policy:
 
@@ -47,6 +48,7 @@ foo( data, function() {
 // Usage of jQuery object
 $( '<div class="myclass"></div>' );
 ```
+
 ## Format
 - use curly brackets to form blocks of code
 
@@ -68,7 +70,7 @@ var title = 'My title',
     story = 'My story';
 ```
 
-- global variabels should always be referenzed by using the window object (eg. window.myGlobalVar) 
+- global variables should always be referenced by using the window object (eg. window.myGlobalVar) 
 - whenever we can, we should use single ticks
 
 ```js
@@ -79,6 +81,7 @@ $( '<div class="myclass"></div>' );
 ## Comparisons
 For comparisons use:
 
+```
 String: typeof object === "string"  
 Number: typeof object === "number"  
 Boolean: typeof object === "boolean"  
@@ -92,6 +95,34 @@ null or undefined: object == null
 Global Variables: typeof variable ==="undefined"  
 Local Variables: variable === undefined  
 Properties: object.prop === undefined  
+```
+
+## When to use attributes, data-attributes and `js-` classes
+General use: whenever possible use HTML Attributes.
+
+### `js-` classes
+Use those prefixed classes only, if there are no styles bound to the element.
+This helps with refactoring, to ensure the class is not removed because it contains no styles.
+**Therefore: Do not style classes prefixed with `js-`**
+
+### data-attributes
+We use data-attributes for nearly anything.
+They might trigger js or contain some styles.
+General rule of thumb is applied when using data-attributes.
+To add an attribute use `element.dataset.attribute = true;`.
+To remove them use `delete element.dataset.attribute;`.
+
+## Import order
+1. optional style files
+2. optional HTML Templates
+3. `web.core` js files
+4. js files from current vertical
+
+## Components
+We consider anything which is purely JS based as a component.
+This contains JS needed for initialization, HTML Files and Styles. These should be stored `/javascript/web.core/components/ComponentName`.
+Each Component should at least contain a `index.mjs`, `style.sass` and `template.html`.
+
 
 ## Documentation
 Use [JsDoc Style][2] to describe functions.
