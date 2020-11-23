@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Babel and our supported browserlist &mdash; Frontend Developer Handbook  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/zon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Async Await" href="async-await.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+<a href="../index.html">
+<img src="../_static/zon.png" class="logo" alt="Logo"/>
+ Frontend Developer Handbook
+</a>
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../links/index.html">Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/guidelines.html">Javascript Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sass/guidelines.html">Sass Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../practices/index.html">Practices</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Experiments</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="async-await.html">async/await</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">babel and our browserlist</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#currently">currently</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#with-babel-applied-to-all-files-m-js">with babel applied to all files (<code class="docutils literal notranslate"><span class="pre">.m?js</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#with-babel-applied-to-all-files-m-js-and-our-browserlist-updated">with babel applied to all files (<code class="docutils literal notranslate"><span class="pre">.m?js</span></code>) and our browserlist updated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#with-babel-applied-to-all-files-and-a-custom-browserlist">With babel applied to all files and a custom browserlist</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+
+
+<ul style="margin-top: 2em">
+  <li class="toctree-l1"><a class="reference external" href="https://github.com/ZeitOnline/frontend-developer-handbook/edit/master/experiments/babel-browserlist.md" target="_blank">Diese Seite editieren</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Frontend Developer Handbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Experiments</a> &raquo;</li>
+        
+      <li>Babel and our supported browserlist</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/experiments/babel-browserlist.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+           <div itemprop="articleBody">
+            
+  <div class="section" id="babel-and-our-supported-browserlist">
+<h1>Babel and our supported browserlist<a class="headerlink" href="#babel-and-our-supported-browserlist" title="Permalink to this headline">¶</a></h1>
+<p>From time to time we try to update our browserlist. We do this, because the used browsers change, and we want to decrease our js/ css size.</p>
+<p>First of all we can now safely use babel on all our js files.</p>
+<div class="section" id="currently">
+<h2>currently<a class="headerlink" href="#currently" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">static/</span></code></p>
+<ul>
+<li><p>6.3 MB on the disk / 525 files</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">static/css/</span></code></p>
+<ul>
+<li><p>3.5MB on the disk / 355 files</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">static/js</span></code></p>
+<ul>
+<li><p>860KB on the disk / 92 files</p></li>
+<li><p>site.js: 33KB on the disk
+<img alt="../_images/default_all.png" src="../_images/default_all.png" />
+<img alt="../_images/default_all_size.png" src="../_images/default_all_size.png" /></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="with-babel-applied-to-all-files-m-js">
+<h2>with babel applied to all files (<code class="docutils literal notranslate"><span class="pre">.m?js</span></code>)<a class="headerlink" href="#with-babel-applied-to-all-files-m-js" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">static/</span></code></p>
+<ul>
+<li><p>6.3 MB on the disk / 525 files</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">static/css/</span></code></p>
+<ul>
+<li><p>3.5MB on the disk / 355 files</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">static/js/</span></code></p>
+<ul>
+<li><p>860 KB on the disk / 92 files</p></li>
+<li><p>site.js: 33KB on the disk
+<img alt="../_images/babel_all.png" src="../_images/babel_all.png" />
+<img alt="../_images/babel_all_size.png" src="../_images/babel_all_size.png" /></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="with-babel-applied-to-all-files-m-js-and-our-browserlist-updated">
+<h2>with babel applied to all files (<code class="docutils literal notranslate"><span class="pre">.m?js</span></code>) and our browserlist updated<a class="headerlink" href="#with-babel-applied-to-all-files-m-js-and-our-browserlist-updated" title="Permalink to this headline">¶</a></h2>
+<p>We might try to update our browserlist to reduce the bundle size.
+Therefore we use <a class="reference external" href="https://browserl.ist/?q=%3E+0.3%25+in+DE">all Browsers with more then <code class="docutils literal notranslate"><span class="pre">0.3%</span></code> of usage in germany</a>.
+This results in a slight decrease of the file sizes.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">static</span></code></p>
+<ul>
+<li><p>6.2 MB on the disk / 525 files</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">css</span></code></p>
+<ul>
+<li><p>3.4 MB on the disk / 355 files</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">js</span></code></p>
+<ul>
+<li><p>848KB on the disk / 92 files</p></li>
+<li><p>site.js: 33KB on the disk
+<img alt="experiments/babel_all_browserlist_get_0.3.png" src="experiments/babel_all_browserlist_get_0.3.png" />
+<img alt="experiments/babel_all_browserlist_get_0.3_size.png" src="experiments/babel_all_browserlist_get_0.3_size.png" /></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="with-babel-applied-to-all-files-and-a-custom-browserlist">
+<h2>With babel applied to all files and a custom browserlist<a class="headerlink" href="#with-babel-applied-to-all-files-and-a-custom-browserlist" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;browserslist&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="s2">&quot;Chrome &gt;= 55&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;Firefox &gt;= 52&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;Edge &gt;= 17&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;Explorer &gt;= 11&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;iOS &gt;= 9&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;Safari &gt;= 9&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;Android &gt;= 7&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;Opera &gt;= 58&quot;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">static/</span></code></p>
+<ul>
+<li><p>6.1 MB on the disk / 525 files</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">static/css</span></code></p>
+<ul>
+<li><p>3.3 MB on the disk / 355 files</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">static/js</span></code></p>
+<ul>
+<li><p>848 KB on the disk / 92 files</p></li>
+<li><p>site.js: 33 KB on the disk
+<img alt="experiments/babel_all_custom_browserlist.png" src="experiments/babel_all_custom_browserlist.png" />
+<img alt="experiments/babel_all_custom_browserlist_size.png" src="experiments/babel_all_custom_browserlist_size.png" /></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+
+<iframe src="" style="width:100px;height:75px;border:none;"></iframe>
+
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="async-await.html" class="btn btn-neutral float-left" title="Async Await" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright ZEIT ONLINE
+      <span class="lastupdated">
+        Last updated on Nov 23, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

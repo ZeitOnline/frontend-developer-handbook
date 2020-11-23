@@ -1,4 +1,6 @@
 # Experiments
 
-* [async/await](async_await.md)
-* [babel and our browserlist](babel_browserlist.md)
+## Contents
+
+* [async/await](../async-await.md)
+* [babel and our browserlist](../babel-browserlist.md)

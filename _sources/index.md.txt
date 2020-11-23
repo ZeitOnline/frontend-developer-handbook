@@ -1,13 +1,12 @@
 # ZEIT ONLINE Frontend Developer Handbook
 
-Contents
----------
+## Contents
 
 * [Blog](blog/index.md)
 * [Links](links/index.md)
 * [Javascript Guidelines](javascript/guidelines.md)
 * [Sass Guidelines](sass/guidelines.md)
-* [Practices](practices/peer-code-reviews.md)
+* [Practices](practices/index.md)
 * [Experiments](experiments/index.md)
 
 
