@@ -3,6 +3,11 @@
 ## New
 - Das [Increment Magazin](https://increment.com/issues/) bringt alle paar Monate eine neue Ausgabe. Letztens zu [Frontend](https://increment.com/frontend/), jetzt zu [Remote](https://increment.com/remote/)
 - [Hands-Free Coding](https://www.joshwcomeau.com/blog/hands-free-coding/)
+- [Design good practices](https://goodpractices.design/) – Guidelines to naming conventions, components structure and document organization.
+- [Learn Eleventy](https://learneleventy.com/)
+- [2020: The Year of the Linux Desktop - Moving from Macbook to Linux](https://monadical.com/posts/moving-to-linux-desktop.html)
+- WebAudioAPI: [The Bluesman](https://codepen.io/gregh/full/zNzvOm)
+- [Standard JS - JavaScript Standard Style](https://standardjs.com/)
 
 ## Learn
 ### Basiswissen
