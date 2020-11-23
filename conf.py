@@ -3,6 +3,7 @@ from recommonmark.transform import AutoStructify
 project = 'Frontend Developer Handbook'
 copyright = 'ZEIT ONLINE'
 
+extensions = ['recommonmark']
 source_suffix = ['.md']
 source_parsers = {
    '.md': 'recommonmark.parser.CommonMarkParser',
