@@ -4,10 +4,6 @@ project = 'Frontend Developer Handbook'
 copyright = 'ZEIT ONLINE'
 
 extensions = ['recommonmark']
-source_suffix = ['.md']
-source_parsers = {
-   '.md': 'recommonmark.parser.CommonMarkParser',
-}
 
 master_doc = 'index'
 
