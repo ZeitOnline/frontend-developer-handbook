@@ -38,8 +38,8 @@ This results in a slight decrease of the file sizes.
 - `js`
     - 848KB on the disk / 92 files
     - site.js: 33KB on the disk
-![](babel_all_browserlist_get_0.3.png)
-![](babel_all_browserlist_get_0.3_size.png)
+![](babel_all_browserlist_ger_0.3.png)
+![](babel_all_browserlist_ger_0.3_size.png)
 
 
 ## With babel applied to all files and a custom browserlist
@@ -60,5 +60,5 @@ This results in a slight decrease of the file sizes.
 - `static/js`
     - 848 KB on the disk / 92 files
     - site.js: 33 KB on the disk 
-![](babel_all_custom_browserlist.png)
-![](babel_all_custom_browserlist_size.png)
+![](babel_all_custom_browsers.png)
+![](babel_all_custom_browsers_size.png)
