@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ZEIT ONLINE Jinja Coding Guidelines &mdash; Frontend Developer Handbook  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/zon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Jinja Template Filter und Checks" href="template-filters.html" />
+    <link rel="prev" title="Jinja" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+<a href="../index.html">
+<img src="../_static/zon.png" class="logo" alt="Logo"/>
+ Frontend Developer Handbook
+</a>
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../blog/index.html">Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../links/index.html">Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/guidelines.html">Javascript Guidelines</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Jinja Guidelines and Best Practice</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Jinja Coding Guidelines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#indentation">Indentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#whitespaces">Whitespaces</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blank-lines">Blank lines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#line-length">Line length</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#assignments">Assignments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#embedded-code">Embedded code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="template-filters.html">Jinja Template Filters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sass/guidelines.html">Sass Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../practices/index.html">Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experiments/index.html">Experiments</a></li>
+</ul>
+
+            
+          
+
+
+<ul style="margin-top: 2em">
+  <li class="toctree-l1"><a class="reference external" href="https://github.com/ZeitOnline/frontend-developer-handbook/edit/master/jinja/coding-guidelines.md" target="_blank">Diese Seite editieren</a></li>
+</ul>
+
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Frontend Developer Handbook</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Jinja</a> &raquo;</li>
+        
+      <li>ZEIT ONLINE Jinja Coding Guidelines</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/jinja/coding-guidelines.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+           <div itemprop="articleBody">
+            
+  <div class="section" id="zeit-online-jinja-coding-guidelines">
+<h1>ZEIT ONLINE Jinja Coding Guidelines<a class="headerlink" href="#zeit-online-jinja-coding-guidelines" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="indentation">
+<h2>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h2>
+<p>Use 4 spaces to indent HTML tags and template blocks.</p>
+</div>
+<div class="section" id="whitespaces">
+<h2>Whitespaces<a class="headerlink" href="#whitespaces" title="Permalink to this headline">¶</a></h2>
+<p>Use <a class="reference external" href="http://jinja.pocoo.org/docs/templates/#whitespace-control">whitespace control</a>
+to strip whitespaces around or within control structures where needed.</p>
+<p>Always pad <a class="reference external" href="http://jinja.pocoo.org/docs/templates/#list-of-control-structures">control statements</a>
+and variables with 1 space before and after their braces::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HTML</span><span class="o">+</span><span class="n">Django</span>
+<span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">container</span> <span class="o">%</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="n">span</span><span class="o">&gt;</span><span class="p">{{</span> <span class="n">item</span><span class="o">.</span><span class="n">text</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Also add a 1 space padding to <a class="reference external" href="http://jinja.pocoo.org/docs/templates/#filters">filter</a> pipes::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">container</span> <span class="o">|</span> <span class="n">join</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">)</span> <span class="p">}}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="blank-lines">
+<h2>Blank lines<a class="headerlink" href="#blank-lines" title="Permalink to this headline">¶</a></h2>
+<p>There is <em>no</em> blank line at the top and exactly <em>one</em> at the end of a file.</p>
+<p>Use one blank line to separate semantic HTML sections and jinja blocks (i.e. macros).</p>
+<p>Import and extend statements should be grouped at the top of a document, with
+one trailing blank line.</p>
+</div>
+<div class="section" id="line-length">
+<h2>Line length<a class="headerlink" href="#line-length" title="Permalink to this headline">¶</a></h2>
+<p>A strict maximum line length is not enforced, but try to avoid unnecessarily
+long lines with multiple tags.</p>
+</div>
+<div class="section" id="assignments">
+<h2>Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
+<p>Avoid assignments for cached properties and static attributes, like
+<code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">set</span> <span class="pre">val</span> <span class="pre">=</span> <span class="pre">view.val</span> <span class="pre">%}</span></code>. <a class="reference external" href="http://jinja.pocoo.org/docs/templates/#assignments">Assigning</a>
+return values of computationally heavy methods, however, is encouraged::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="nb">set</span> <span class="n">web</span> <span class="o">=</span> <span class="n">crawl_web</span><span class="p">()</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<p>Use <a class="reference external" href="http://jinja.pocoo.org/docs/templates/#comments">jinja style comments</a>
+instead of HTML comments to prevent them from rendering::</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="c1"># TODO: This section needs to be reworked. #}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="embedded-code">
+<h2>Embedded code<a class="headerlink" href="#embedded-code" title="Permalink to this headline">¶</a></h2>
+<p>Avoid substancial computation within control structures and try to move such
+code to view properties.</p>
+<p>Still, code inside jinja control structures is <em>mostly</em> Python and should
+conform to <a class="reference external" href="https://www.python.org/dev/peps/pep-0008">PEP8</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+
+<iframe src="" style="width:100px;height:75px;border:none;"></iframe>
+
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="template-filters.html" class="btn btn-neutral float-right" title="Jinja Template Filter und Checks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Jinja" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright ZEIT ONLINE
+      <span class="lastupdated">
+        Last updated on Dec 02, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
