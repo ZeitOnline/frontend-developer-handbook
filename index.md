@@ -5,6 +5,7 @@
 * [Blog](blog/index.md)
 * [Links](links/index.md)
 * [Javascript Guidelines](javascript/guidelines.md)
+* [Jinja Guidelines and Best Practice](jinja/index.rst)
 * [Sass Guidelines](sass/guidelines.md)
 * [Practices](practices/index.md)
 * [Experiments](experiments/index.md)
