@@ -1,15 +1,12 @@
 TOC Frontend Developer Handbook
 -------------------------------
 
-TODO: Das muss doch automatisch für alle Verzeichnisse hinzukriegen sein.
+TODO: Wieso sind jetzt Sachen doppelt? Müssen wir Toctrees aus index-Files aus den Folders löschen?
 
 .. toctree::
+    :glob:
     :maxdepth: 3
+    :numbered:
+    :titlesonly:
 
-    blog/index
-    experiments/index
-    javascript/guidelines
-    jinja/index
-    links/index
-    practices/index
-    sass/guidelines
+    **
