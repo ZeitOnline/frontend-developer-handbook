@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Async Await &mdash; Frontend Developer Handbook  documentation</title>
+  <title>3. Async Await &mdash; Frontend Developer Handbook  documentation</title>
   
 
   
@@ -74,14 +74,14 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Async Await</a><ul>
-<li><a class="reference internal" href="#userstory">Userstory</a></li>
-<li><a class="reference internal" href="#what-is-async-await">What is async/await?</a></li>
-<li><a class="reference internal" href="#but-why-though">But why though?</a></li>
-<li><a class="reference internal" href="#status-quo-with-the-easyembeds-as-an-example">Status Quo with the easyEmbeds as an example</a></li>
-<li><a class="reference internal" href="#code-using-async-await">Code using async/await</a></li>
-<li><a class="reference internal" href="#result">Result</a></li>
-<li><a class="reference internal" href="#todo">Todo:</a></li>
+<li><a class="reference internal" href="#">3. Async Await</a><ul>
+<li><a class="reference internal" href="#userstory">3.1. Userstory</a></li>
+<li><a class="reference internal" href="#what-is-async-await">3.2. What is async/await?</a></li>
+<li><a class="reference internal" href="#but-why-though">3.3. But why though?</a></li>
+<li><a class="reference internal" href="#status-quo-with-the-easyembeds-as-an-example">3.4. Status Quo with the easyEmbeds as an example</a></li>
+<li><a class="reference internal" href="#code-using-async-await">3.5. Code using async/await</a></li>
+<li><a class="reference internal" href="#result">3.6. Result</a></li>
+<li><a class="reference internal" href="#todo">3.7. Todo:</a></li>
 </ul>
 </li>
 </ul>
@@ -136,7 +136,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Async Await</li>
+      <li>3. Async Await</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -157,25 +157,25 @@
            <div itemprop="articleBody">
             
   <div class="section" id="async-await">
-<h1>Async Await<a class="headerlink" href="#async-await" title="Permalink to this headline">¶</a></h1>
+<h1>3. Async Await<a class="headerlink" href="#async-await" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="userstory">
-<h2>Userstory<a class="headerlink" href="#userstory" title="Permalink to this headline">¶</a></h2>
+<h2>3.1. Userstory<a class="headerlink" href="#userstory" title="Permalink to this headline">¶</a></h2>
 <p>As a developer I’d like to use asynchronous functions within my javascript modules, to prevent unnecessary chaining of promises.</p>
 </div>
 <div class="section" id="what-is-async-await">
-<h2>What is async/await?<a class="headerlink" href="#what-is-async-await" title="Permalink to this headline">¶</a></h2>
+<h2>3.2. What is async/await?<a class="headerlink" href="#what-is-async-await" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>An async function can contain an await expression, that pauses the execution of the function and waits for the passed Promise’s resolution, and then resumes the async function’s execution and returns the resolved value. You can think of a Promise in JavaScript as the equivalent of Java’s Future or C# ‘s Task. <a class="reference external" href="https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5?gi=92f3b9fc7172">Source</a></p>
 </div></blockquote>
 </div>
 <div class="section" id="but-why-though">
-<h2>But why though?<a class="headerlink" href="#but-why-though" title="Permalink to this headline">¶</a></h2>
+<h2>3.3. But why though?<a class="headerlink" href="#but-why-though" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>Yes, you read that right. The V8 team made improvements that make async/await functions run faster than traditional promises in the JavaScript engine. 12.05.2019. <a class="reference external" href="https://itnext.io/javascripts-async-await-versus-promise-the-great-debate-6308cb2e10b3">Source</a></p>
 </div></blockquote>
 </div>
 <div class="section" id="status-quo-with-the-easyembeds-as-an-example">
-<h2>Status Quo with the easyEmbeds as an example<a class="headerlink" href="#status-quo-with-the-easyembeds-as-an-example" title="Permalink to this headline">¶</a></h2>
+<h2>3.4. Status Quo with the easyEmbeds as an example<a class="headerlink" href="#status-quo-with-the-easyembeds-as-an-example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript= notranslate"><div class="highlight"><pre><span></span>posts.forEach( post =&gt; {
     [...]
     fetch( url )
@@ -196,7 +196,7 @@
 </div>
 </div>
 <div class="section" id="code-using-async-await">
-<h2>Code using async/await<a class="headerlink" href="#code-using-async-await" title="Permalink to this headline">¶</a></h2>
+<h2>3.5. Code using async/await<a class="headerlink" href="#code-using-async-await" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript= notranslate"><div class="highlight"><pre><span></span>posts.forEach( async post =&gt; {
     [...]
     try {
@@ -214,7 +214,7 @@
 </div>
 </div>
 <div class="section" id="result">
-<h2>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h2>
+<h2>3.6. Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Babel ensures automatically, that the code is compatible with all defined browsers.</p></li>
 <li><p>Filesize <strong>before</strong>: ~ 3KB</p></li>
@@ -222,7 +222,7 @@
 </ul>
 </div>
 <div class="section" id="todo">
-<h2>Todo:<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
+<h2>3.7. Todo:<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Check if there are any polyfills available</p>
 <ul>
@@ -254,7 +254,7 @@
     <p>
         &copy; Copyright ZEIT ONLINE
       <span class="lastupdated">
-        Last updated on Dec 04, 2020.
+        Last updated on Dec 10, 2020.
       </span>
 
     </p>

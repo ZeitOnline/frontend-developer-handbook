@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Jinja Template Filter und Checks &mdash; Frontend Developer Handbook  documentation</title>
+  <title>9.1.1. Jinja Template Filter und Checks &mdash; Frontend Developer Handbook  documentation</title>
   
 
   
@@ -74,12 +74,12 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Jinja Template Filter und Checks</a><ul>
-<li><a class="reference internal" href="#wie-definiere-ich-einen-neuen-template-filter">Wie definiere ich einen neuen Template Filter?</a></li>
-<li><a class="reference internal" href="#wie-kann-ich-meinen-template-filter-testen">Wie kann ich meinen Template Filter testen?</a></li>
-<li><a class="reference internal" href="#wie-verwende-ich-meinen-template-filter">Wie verwende ich meinen Template Filter?</a></li>
-<li><a class="reference internal" href="#context-filter">Context Filter</a></li>
-<li><a class="reference internal" href="#jinja-template-tests">Jinja Template Tests</a></li>
+<li><a class="reference internal" href="#">9.1.1. Jinja Template Filter und Checks</a><ul>
+<li><a class="reference internal" href="#wie-definiere-ich-einen-neuen-template-filter">9.1.1.1. Wie definiere ich einen neuen Template Filter?</a></li>
+<li><a class="reference internal" href="#wie-kann-ich-meinen-template-filter-testen">9.1.1.2. Wie kann ich meinen Template Filter testen?</a></li>
+<li><a class="reference internal" href="#wie-verwende-ich-meinen-template-filter">9.1.1.3. Wie verwende ich meinen Template Filter?</a></li>
+<li><a class="reference internal" href="#context-filter">9.1.1.4. Context Filter</a></li>
+<li><a class="reference internal" href="#jinja-template-tests">9.1.1.5. Jinja Template Tests</a></li>
 </ul>
 </li>
 </ul>
@@ -134,7 +134,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Jinja Template Filter und Checks</li>
+      <li>9.1.1. Jinja Template Filter und Checks</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -155,11 +155,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="jinja-template-filter-und-checks">
-<h1>Jinja Template Filter und Checks<a class="headerlink" href="#jinja-template-filter-und-checks" title="Permalink to this headline">¶</a></h1>
+<h1>9.1.1. Jinja Template Filter und Checks<a class="headerlink" href="#jinja-template-filter-und-checks" title="Permalink to this headline">¶</a></h1>
 <p>Mit <a class="reference external" href="https://jinja.palletsprojects.com/en/2.11.x/templates/#filters">Template Filtern</a> ist es uns möglich Python Code auszuführen und das Ergebnis im Template auszugeben.</p>
 <p>Diese Template Filter definieren wir in der Datei <code class="docutils literal notranslate"><span class="pre">zeit/web/core/template.py</span></code></p>
 <div class="section" id="wie-definiere-ich-einen-neuen-template-filter">
-<h2>Wie definiere ich einen neuen Template Filter?<a class="headerlink" href="#wie-definiere-ich-einen-neuen-template-filter" title="Permalink to this headline">¶</a></h2>
+<h2>9.1.1.1. Wie definiere ich einen neuen Template Filter?<a class="headerlink" href="#wie-definiere-ich-einen-neuen-template-filter" title="Permalink to this headline">¶</a></h2>
 <p>Ein Template Filter wird durch das Anlegen einer neuen Funktion in der Datei <code class="docutils literal notranslate"><span class="pre">zeit/web/core/template.py</span></code> definiert.
 Diese benötigt den <code class="docutils literal notranslate"><span class="pre">&#64;zeit.web.register_filter</span></code> Decorator.</p>
 <p>Hier ein Beispiel:</p>
@@ -170,7 +170,7 @@ Diese benötigt den <code class="docutils literal notranslate"><span class="pre"
 </div>
 </div>
 <div class="section" id="wie-kann-ich-meinen-template-filter-testen">
-<h2>Wie kann ich meinen Template Filter testen?<a class="headerlink" href="#wie-kann-ich-meinen-template-filter-testen" title="Permalink to this headline">¶</a></h2>
+<h2>9.1.1.2. Wie kann ich meinen Template Filter testen?<a class="headerlink" href="#wie-kann-ich-meinen-template-filter-testen" title="Permalink to this headline">¶</a></h2>
 <p>Es ist gewünscht, dass jeder selbstgeschriebene Template Filter ebenfalls durch Tests überprüft wird.
 Die Tests für unsere Template Filter befinden sich in <code class="docutils literal notranslate"><span class="pre">zeit/web/core/test/test_template.py</span></code>.</p>
 <p>Hier ein Beispiel:</p>
@@ -182,7 +182,7 @@ Die Tests für unsere Template Filter befinden sich in <code class="docutils lit
 </div>
 </div>
 <div class="section" id="wie-verwende-ich-meinen-template-filter">
-<h2>Wie verwende ich meinen Template Filter?<a class="headerlink" href="#wie-verwende-ich-meinen-template-filter" title="Permalink to this headline">¶</a></h2>
+<h2>9.1.1.3. Wie verwende ich meinen Template Filter?<a class="headerlink" href="#wie-verwende-ich-meinen-template-filter" title="Permalink to this headline">¶</a></h2>
 <p>Der neu geschriebene Template Filter lässt sich nun im Template verwenden</p>
 <p>Beispiel:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{{ 2 | multiply_by_two }}
@@ -195,7 +195,7 @@ Die Tests für unsere Template Filter befinden sich in <code class="docutils lit
 <p>erzeugen.</p>
 </div>
 <div class="section" id="context-filter">
-<h2>Context Filter<a class="headerlink" href="#context-filter" title="Permalink to this headline">¶</a></h2>
+<h2>9.1.1.4. Context Filter<a class="headerlink" href="#context-filter" title="Permalink to this headline">¶</a></h2>
 <p>Sogenannte Context Filter sind eine spezielle Form der Filter, bei denen der aktuelle “Context” zur Verfügung steht.</p>
 <p>Bei der Benutzung in Jinja wird, wie in normalen Filtern nur ein Wert (hier die URL) hineingereicht:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">teaser_url</span> <span class="o">|</span> <span class="n">append_campaign_params</span> <span class="p">}}</span>
@@ -211,7 +211,7 @@ Die Tests für unsere Template Filter befinden sich in <code class="docutils lit
 <p>Die Klassendefinition habe ich leider nicht gefunden. Lapidar gesagt: es ist ein Objekt, das Informationen über die aktuelle Umgebung bereitstellt. Im Falle eines Teasers beinhaltet es Dinge wie die <code class="docutils literal notranslate"><span class="pre">module_loop</span></code>, <code class="docutils literal notranslate"><span class="pre">area_loop</span></code> und die aktuelle <code class="docutils literal notranslate"><span class="pre">view</span></code>, aber auch den <code class="docutils literal notranslate"><span class="pre">request</span></code>, <code class="docutils literal notranslate"><span class="pre">toggles</span></code> und <code class="docutils literal notranslate"><span class="pre">settings</span></code>, sowie Hilfsfunktionen wie <code class="docutils literal notranslate"><span class="pre">get_image</span></code> und <code class="docutils literal notranslate"><span class="pre">get_svg_from_file</span></code>.</p>
 </div>
 <div class="section" id="jinja-template-tests">
-<h2>Jinja Template Tests<a class="headerlink" href="#jinja-template-tests" title="Permalink to this headline">¶</a></h2>
+<h2>9.1.1.5. Jinja Template Tests<a class="headerlink" href="#jinja-template-tests" title="Permalink to this headline">¶</a></h2>
 <p>Template Tests (oder “Template Checks”) in Jinja funktionieren im Prinzip wie Filter. Der Unterschied: Tests geben nur den Boolean Wert True/false zurück, un werden entsprechend genutzt.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@zeit.web.register_test</span>
 <span class="k">def</span> <span class="nf">topicpage</span><span class="p">(</span><span class="n">context</span><span class="p">):</span>
@@ -241,7 +241,7 @@ Die Tests für unsere Template Filter befinden sich in <code class="docutils lit
     <p>
         &copy; Copyright ZEIT ONLINE
       <span class="lastupdated">
-        Last updated on Dec 04, 2020.
+        Last updated on Dec 10, 2020.
       </span>
 
     </p>
