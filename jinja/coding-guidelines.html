@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8. ZEIT ONLINE Jinja Coding Guidelines &mdash; Frontend Developer Handbook  documentation</title>
+  <title>ZEIT ONLINE Jinja Coding Guidelines &mdash; Frontend Developer Handbook  documentation</title>
   
 
   
@@ -74,14 +74,14 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">8. ZEIT ONLINE Jinja Coding Guidelines</a><ul>
-<li><a class="reference internal" href="#indentation">8.1. Indentation</a></li>
-<li><a class="reference internal" href="#whitespaces">8.2. Whitespaces</a></li>
-<li><a class="reference internal" href="#blank-lines">8.3. Blank lines</a></li>
-<li><a class="reference internal" href="#line-length">8.4. Line length</a></li>
-<li><a class="reference internal" href="#assignments">8.5. Assignments</a></li>
-<li><a class="reference internal" href="#comments">8.6. Comments</a></li>
-<li><a class="reference internal" href="#embedded-code">8.7. Embedded code</a></li>
+<li><a class="reference internal" href="#">ZEIT ONLINE Jinja Coding Guidelines</a><ul>
+<li><a class="reference internal" href="#indentation">Indentation</a></li>
+<li><a class="reference internal" href="#whitespaces">Whitespaces</a></li>
+<li><a class="reference internal" href="#blank-lines">Blank lines</a></li>
+<li><a class="reference internal" href="#line-length">Line length</a></li>
+<li><a class="reference internal" href="#assignments">Assignments</a></li>
+<li><a class="reference internal" href="#comments">Comments</a></li>
+<li><a class="reference internal" href="#embedded-code">Embedded code</a></li>
 </ul>
 </li>
 </ul>
@@ -136,7 +136,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>8. ZEIT ONLINE Jinja Coding Guidelines</li>
+      <li>ZEIT ONLINE Jinja Coding Guidelines</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -157,13 +157,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="zeit-online-jinja-coding-guidelines">
-<h1>8. ZEIT ONLINE Jinja Coding Guidelines<a class="headerlink" href="#zeit-online-jinja-coding-guidelines" title="Permalink to this headline">¶</a></h1>
+<h1>ZEIT ONLINE Jinja Coding Guidelines<a class="headerlink" href="#zeit-online-jinja-coding-guidelines" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="indentation">
-<h2>8.1. Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h2>
+<h2>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h2>
 <p>Use 4 spaces to indent HTML tags and template blocks.</p>
 </div>
 <div class="section" id="whitespaces">
-<h2>8.2. Whitespaces<a class="headerlink" href="#whitespaces" title="Permalink to this headline">¶</a></h2>
+<h2>Whitespaces<a class="headerlink" href="#whitespaces" title="Permalink to this headline">¶</a></h2>
 <p>Use <a class="reference external" href="http://jinja.pocoo.org/docs/templates/#whitespace-control">whitespace control</a>
 to strip whitespaces around or within control structures where needed.</p>
 <p>Always pad <a class="reference external" href="http://jinja.pocoo.org/docs/templates/#list-of-control-structures">control statements</a>
@@ -180,19 +180,19 @@ and variables with 1 space before and after their braces::</p>
 </div>
 </div>
 <div class="section" id="blank-lines">
-<h2>8.3. Blank lines<a class="headerlink" href="#blank-lines" title="Permalink to this headline">¶</a></h2>
+<h2>Blank lines<a class="headerlink" href="#blank-lines" title="Permalink to this headline">¶</a></h2>
 <p>There is <em>no</em> blank line at the top and exactly <em>one</em> at the end of a file.</p>
 <p>Use one blank line to separate semantic HTML sections and jinja blocks (i.e. macros).</p>
 <p>Import and extend statements should be grouped at the top of a document, with
 one trailing blank line.</p>
 </div>
 <div class="section" id="line-length">
-<h2>8.4. Line length<a class="headerlink" href="#line-length" title="Permalink to this headline">¶</a></h2>
+<h2>Line length<a class="headerlink" href="#line-length" title="Permalink to this headline">¶</a></h2>
 <p>A strict maximum line length is not enforced, but try to avoid unnecessarily
 long lines with multiple tags.</p>
 </div>
 <div class="section" id="assignments">
-<h2>8.5. Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
+<h2>Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
 <p>Avoid assignments for cached properties and static attributes, like
 <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">set</span> <span class="pre">val</span> <span class="pre">=</span> <span class="pre">view.val</span> <span class="pre">%}</span></code>. <a class="reference external" href="http://jinja.pocoo.org/docs/templates/#assignments">Assigning</a>
 return values of computationally heavy methods, however, is encouraged::</p>
@@ -201,7 +201,7 @@ return values of computationally heavy methods, however, is encouraged::</p>
 </div>
 </div>
 <div class="section" id="comments">
-<h2>8.6. Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
 <p>Use <a class="reference external" href="http://jinja.pocoo.org/docs/templates/#comments">jinja style comments</a>
 instead of HTML comments to prevent them from rendering::</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="c1"># TODO: This section needs to be reworked. #}</span>
@@ -209,7 +209,7 @@ instead of HTML comments to prevent them from rendering::</p>
 </div>
 </div>
 <div class="section" id="embedded-code">
-<h2>8.7. Embedded code<a class="headerlink" href="#embedded-code" title="Permalink to this headline">¶</a></h2>
+<h2>Embedded code<a class="headerlink" href="#embedded-code" title="Permalink to this headline">¶</a></h2>
 <p>Avoid substancial computation within control structures and try to move such
 code to view properties.</p>
 <p>Still, code inside jinja control structures is <em>mostly</em> Python and should
@@ -233,7 +233,7 @@ conform to <a class="reference external" href="https://www.python.org/dev/peps/p
     <p>
         &copy; Copyright ZEIT ONLINE
       <span class="lastupdated">
-        Last updated on Dec 10, 2020.
+        Last updated on Dec 11, 2020.
       </span>
 
     </p>

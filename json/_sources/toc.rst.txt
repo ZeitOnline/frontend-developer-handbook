@@ -6,7 +6,6 @@ TODO: Wieso sind jetzt Sachen doppelt? Müssen wir Toctrees aus index-Files aus 
 .. toctree::
     :glob:
     :maxdepth: 3
-    :numbered:
     :titlesonly:
 
     **

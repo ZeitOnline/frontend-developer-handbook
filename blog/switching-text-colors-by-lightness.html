@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.1.2. Switching text colors in subject to its background color lightness &mdash; Frontend Developer Handbook  documentation</title>
+  <title>Switching text colors in subject to its background color lightness &mdash; Frontend Developer Handbook  documentation</title>
   
 
   
@@ -74,11 +74,11 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">2.1.2. Switching text colors in subject to its background color lightness</a><ul>
-<li><a class="reference internal" href="#resources">2.1.2.1. Resources</a><ul>
-<li><a class="reference internal" href="#articles">2.1.2.1.1. Articles</a></li>
-<li><a class="reference internal" href="#webstandards">2.1.2.1.2. Webstandards</a></li>
-<li><a class="reference internal" href="#tools">2.1.2.1.3. Tools</a></li>
+<li><a class="reference internal" href="#">Switching text colors in subject to its background color lightness</a><ul>
+<li><a class="reference internal" href="#resources">Resources</a><ul>
+<li><a class="reference internal" href="#articles">Articles</a></li>
+<li><a class="reference internal" href="#webstandards">Webstandards</a></li>
+<li><a class="reference internal" href="#tools">Tools</a></li>
 </ul>
 </li>
 </ul>
@@ -135,7 +135,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>2.1.2. Switching text colors in subject to its background color lightness</li>
+      <li>Switching text colors in subject to its background color lightness</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -156,7 +156,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="switching-text-colors-in-subject-to-its-background-color-lightness">
-<h1>2.1.2. Switching text colors in subject to its background color lightness<a class="headerlink" href="#switching-text-colors-in-subject-to-its-background-color-lightness" title="Permalink to this headline">¶</a></h1>
+<h1>Switching text colors in subject to its background color lightness<a class="headerlink" href="#switching-text-colors-in-subject-to-its-background-color-lightness" title="Permalink to this headline">¶</a></h1>
 <p>Sometimes you build a feature with the feeling, there is something that can go wrong afterwards. In this case we built a CMS feature where the editor could decide more or less about the background color of a part of the website. This poses in our thinking a threat to the accessibility of the foreground text, falling behind in contrast in the best case, being completely unreadable in the worst case. No user would certainly choose a black background with black text on it, but what about some of the so loved shades of gray? So… we looked for a solution to change text colors automatically.</p>
 <p>What we found was <a class="reference external" href="https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/">Switch font color for different backgrounds with CSS</a> over at CSS-Tricks, which uses css variables (and a css math coding trick from hell to achieve conditional statements) to change text colors in subject to its background. But the article also led to the <a class="reference external" href="https://www.w3.org/TR/AERT/#color-contrast">Techniques For Accessibility Evaluation And Repair Tools Working Draft</a> of the W3C, which includes an equation to estimate <em>perceived lightness</em> of colors.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">(</span><span class="n">red</span> <span class="o">*</span> <span class="mf">0.299</span> <span class="o">+</span> <span class="n">green</span> <span class="o">*</span> <span class="mf">0.587</span> <span class="o">+</span> <span class="n">blue</span> <span class="o">*</span> <span class="mf">0.114</span><span class="p">)</span> <span class="o">/</span> <span class="mi">255</span>
@@ -211,21 +211,21 @@
 </div>
 <p>Based on the CSS-Tricks method there is <a class="reference external" href="https://codepen.io/codecandies/pen/QYQLZb/">a codepen</a> to demonstrate the outcome.</p>
 <div class="section" id="resources">
-<h2>2.1.2.1. Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="articles">
-<h3>2.1.2.1.1. Articles<a class="headerlink" href="#articles" title="Permalink to this headline">¶</a></h3>
+<h3>Articles<a class="headerlink" href="#articles" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/">Switch font color for different backgrounds with CSS</a></p></li>
 </ul>
 </div>
 <div class="section" id="webstandards">
-<h3>2.1.2.1.2. Webstandards<a class="headerlink" href="#webstandards" title="Permalink to this headline">¶</a></h3>
+<h3>Webstandards<a class="headerlink" href="#webstandards" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.w3.org/TR/AERT/#color-contrast">Techniques For Accessibility Evaluation And Repair Tools Working Draft</a></p></li>
 </ul>
 </div>
 <div class="section" id="tools">
-<h3>2.1.2.1.3. Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h3>
+<h3>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/mozilla-services/axe-selenium-python">axe-selenium-python</a></p></li>
 <li><p><a class="reference external" href="https://docs.pytest.org/en/latest/">pytest</a></p></li>
@@ -251,7 +251,7 @@
     <p>
         &copy; Copyright ZEIT ONLINE
       <span class="lastupdated">
-        Last updated on Dec 10, 2020.
+        Last updated on Dec 11, 2020.
       </span>
 
     </p>
