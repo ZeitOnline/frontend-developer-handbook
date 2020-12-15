@@ -3,7 +3,9 @@ var DOCUMENTATION_OPTIONS = {
     VERSION: '',
     LANGUAGE: 'None',
     COLLAPSE_INDEX: false,
+    BUILDER: 'json',
     FILE_SUFFIX: '.fjson',
+    LINK_SUFFIX: '.html',
     HAS_SOURCE: true,
     SOURCELINK_SUFFIX: '.txt',
     NAVIGATION_WITH_KEYS: false

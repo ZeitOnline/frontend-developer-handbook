@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,11 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/zon.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/zon.ico"/>
   
@@ -19,22 +23,20 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
@@ -64,6 +66,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
 
@@ -96,6 +99,7 @@
 
 
         </div>
+        
       </div>
     </nav>
 
@@ -134,7 +138,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../toc.html">Docs</a> &raquo;</li>
+      <li><a href="../toc.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Jinja Template Filter und Checks</li>
     
@@ -153,7 +157,6 @@
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-
            <div itemprop="articleBody">
             
   <div class="section" id="jinja-template-filter-und-checks">
@@ -165,7 +168,7 @@
 <p>Ein Template Filter wird durch das Anlegen einer neuen Funktion in der Datei <code class="docutils literal notranslate"><span class="pre">zeit/web/core/template.py</span></code> definiert.
 Diese benötigt den <code class="docutils literal notranslate"><span class="pre">&#64;zeit.web.register_filter</span></code> Decorator.</p>
 <p>Hier ein Beispiel:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@zeit.web.register_filter</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@zeit</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">register_filter</span>
 <span class="k">def</span> <span class="nf">multiply_by_two</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
   <span class="k">return</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">2</span>
 </pre></div>
@@ -204,7 +207,7 @@ Die Tests für unsere Template Filter befinden sich in <code class="docutils lit
 </pre></div>
 </div>
 <p>Der Filter selbst nimmt zwei Parameter entgegen (<code class="docutils literal notranslate"><span class="pre">context</span></code> und <code class="docutils literal notranslate"><span class="pre">url</span></code>): Das funktioniert, weil bei Context Filtern der Context automatisch als erstes Argument in den Filter gegeben wird. Man muss das nicht selbst aus dem Template heraus machen.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@zeit.web.register_ctxfilter</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@zeit</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">register_ctxfilter</span>
 <span class="k">def</span> <span class="nf">append_campaign_params</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
   <span class="o">...</span>
 </pre></div>
@@ -215,9 +218,9 @@ Die Tests für unsere Template Filter befinden sich in <code class="docutils lit
 <div class="section" id="jinja-template-tests">
 <h2>Jinja Template Tests<a class="headerlink" href="#jinja-template-tests" title="Permalink to this headline">¶</a></h2>
 <p>Template Tests (oder “Template Checks”) in Jinja funktionieren im Prinzip wie Filter. Der Unterschied: Tests geben nur den Boolean Wert True/false zurück, un werden entsprechend genutzt.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@zeit.web.register_test</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@zeit</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">register_test</span>
 <span class="k">def</span> <span class="nf">topicpage</span><span class="p">(</span><span class="n">context</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;autotopic&#39;</span><span class="p">,</span> <span class="s1">&#39;manualtopic&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;autotopic&#39;</span><span class="p">,</span> <span class="s1">&#39;manualtopic&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Im Template kann die Abfrage dann in recht natürlicher Sprache erfolgen:</p>
@@ -231,9 +234,6 @@ Die Tests für unsere Template Filter befinden sich in <code class="docutils lit
            </div>
            
           </div>
-
-<iframe src="https://like-button.zeit.de/like" style="width:100px;height:75px;border:none;"></iframe>
-
           <footer>
   
 
@@ -241,6 +241,7 @@ Die Tests für unsere Template Filter befinden sich in <code class="docutils lit
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright ZEIT ONLINE
       <span class="lastupdated">
         Last updated on Dec 15, 2020.
@@ -248,7 +249,14 @@ Die Tests für unsere Template Filter befinden sich in <code class="docutils lit
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -259,7 +267,6 @@ Die Tests für unsere Template Filter befinden sich in <code class="docutils lit
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

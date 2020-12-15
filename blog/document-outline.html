@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,11 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/zon.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/zon.ico"/>
   
@@ -19,22 +23,20 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Experiments" href="../experiments/index.html" />
@@ -66,6 +68,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
 
@@ -103,6 +106,7 @@
 
 
         </div>
+        
       </div>
     </nav>
 
@@ -141,7 +145,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../toc.html">Docs</a> &raquo;</li>
+      <li><a href="../toc.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="index.html">ZEIT ONLINE Developer Blog</a> &raquo;</li>
         
@@ -162,7 +166,6 @@
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-
            <div itemprop="articleBody">
             
   <div class="section" id="small-wins-improving-our-document-outline">
@@ -181,8 +184,8 @@
 <p>The same tool is also available as <a class="reference external" href="https://h5o.github.io/bookmarklet.html">Bookmarklet</a>.</p>
 <p>Another great tool is the <a class="reference external" href="https://validator.w3.org/nu/">Nu Html Checker from the W3C</a>, which checks online URLs, but also accepts text input, which enabled us to test local versions of our site during development.</p>
 <p>The HTML Checker provides <a class="reference external" href="https://validator.w3.org/nu/?showoutline=yes&amp;doc=https%3A%2F%2Fwww.zeit.de%2Findex">two kinds of outline</a>, which illustrates perfectly the dilemma mentioned above:</p>
-<p><img alt="../_images/w3c-outline-example-headings.png" src="../_images/w3c-outline-example-headings.png" />heading level outline</p>
-<p><img alt="../_images/w3c-outline-example-structure.png" src="../_images/w3c-outline-example-structure.png" />structural document outline</p>
+<p><img alt="heading level outline" src="../_images/w3c-outline-example-headings.png" /></p>
+<p><img alt="structural document outline" src="../_images/w3c-outline-example-structure.png" /></p>
 </div>
 <div class="section" id="how-we-improved">
 <h2>How we improved<a class="headerlink" href="#how-we-improved" title="Permalink to this headline">¶</a></h2>
@@ -278,9 +281,6 @@
            </div>
            
           </div>
-
-<iframe src="https://like-button.zeit.de/like" style="width:100px;height:75px;border:none;"></iframe>
-
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
@@ -297,6 +297,7 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright ZEIT ONLINE
       <span class="lastupdated">
         Last updated on Dec 15, 2020.
@@ -304,7 +305,14 @@
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -315,7 +323,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

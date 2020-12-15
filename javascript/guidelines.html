@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,6 +11,11 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/zon.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/zon.ico"/>
   
@@ -19,22 +23,20 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ZEIT ONLINE Jinja Coding Guidelines" href="../jinja/coding-guidelines.html" />
@@ -66,6 +68,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
 
@@ -98,6 +101,7 @@
 
 
         </div>
+        
       </div>
     </nav>
 
@@ -136,7 +140,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../toc.html">Docs</a> &raquo;</li>
+      <li><a href="../toc.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>ZEIT ONLINE JS Coding Guidelines</li>
     
@@ -155,14 +159,13 @@
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-
            <div itemprop="articleBody">
             
   <div class="section" id="zeit-online-js-coding-guidelines">
 <h1>ZEIT ONLINE JS Coding Guidelines<a class="headerlink" href="#zeit-online-js-coding-guidelines" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="notation">
 <h2>Notation<a class="headerlink" href="#notation" title="Permalink to this headline">¶</a></h2>
-<p>All functions and variables should be named in CamelCase (eg. “doCounting”).A function name should include an action and a noun (eg. “countNumber”), if the return value is in boolean the action should be “has” (eg. “hasNumber”).</p>
+<p>All functions and variables should be named in CamelCase (eg. “doCounting”).<br />A function name should include an action and a noun (eg. “countNumber”), if the return value is in boolean the action should be “has” (eg. “hasNumber”).</p>
 </div>
 <div class="section" id="indentation">
 <h2>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h2>
@@ -181,7 +184,7 @@
 <li><p>use one whitespace before and behind equals sign <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">=</span> <span class="pre">)</span></code> and mathematical operators <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">+,</span> <span class="pre">*,</span> <span class="pre">-,</span> <span class="pre">/</span> <span class="pre">)</span></code> and comparisons <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">==,</span> <span class="pre">===,</span> <span class="pre">!=,</span> <span class="pre">!==,</span> <span class="pre">&amp;&amp;,</span> <span class="pre">||,</span> <span class="pre">&gt;,</span> <span class="pre">&lt;</span> <span class="pre">)</span></code></p></li>
 </ul>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="nx">bla</span> <span class="o">==</span> <span class="nx">foo</span> <span class="p">)</span> <span class="p">{</span>
-  <span class="nx">foo</span><span class="p">(</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">zoo</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}</span> <span class="p">);</span>
+  <span class="nx">foo</span><span class="p">(</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">zoo</span><span class="o">:</span> <span class="mf">1</span> <span class="p">}</span> <span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -315,9 +318,6 @@ Each Component should at least contain a <code class="docutils literal notransla
            </div>
            
           </div>
-
-<iframe src="https://like-button.zeit.de/like" style="width:100px;height:75px;border:none;"></iframe>
-
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
@@ -334,6 +334,7 @@ Each Component should at least contain a <code class="docutils literal notransla
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright ZEIT ONLINE
       <span class="lastupdated">
         Last updated on Dec 15, 2020.
@@ -341,7 +342,14 @@ Each Component should at least contain a <code class="docutils literal notransla
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -352,7 +360,6 @@ Each Component should at least contain a <code class="docutils literal notransla
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
