@@ -1,11 +1,25 @@
+===============================
 TOC Frontend Developer Handbook
--------------------------------
+===============================
 
-TODO: Wieso sind jetzt Sachen doppelt? Müssen wir Toctrees aus index-Files aus den Folders löschen?
+Diese Seite dient als Übersichtsseite, und bestückt gleichzeitig die das globale Menü in der linken Sidebar auf jeder Seite.
 
 .. toctree::
-    :glob:
-    :maxdepth: 3
+    :maxdepth: 2
     :titlesonly:
 
-    **
+    🏠️ Home <index>
+    ✍️ Blog <blog/index>
+    🧪 Experiments <experiments/index>
+    🌍️ Links <links/index>
+    👩‍🏫 Practices <practices/index>
+
+
+.. toctree::
+    :caption: Guidelines
+    :maxdepth: 2
+    :titlesonly:
+
+    javascript/guidelines
+    jinja/coding-guidelines
+    sass/guidelines
