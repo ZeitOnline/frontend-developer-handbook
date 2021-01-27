@@ -1,12 +1,29 @@
 # Frontend Linkliste
 
 ## New
-- [Emerging Tooltip](https://codepen.io/ainalem/pen/OJRLRPO)
-- [Web Performance Calendar](https://calendar.perfplanet.com/2020/)
-- [Svelte: First Look (Kurs in Campus Success, Firmenlogin nötig)](https://macmillan.csod.com/ui/lms-learning-details/app/course/0f17adb6-08f1-572b-8f82-e1960b46c8d3)
-- [Podcast: Vue vs. Svelte](https://undefined.fm/radio/vue-vs-svelte-with-evan-you-and-rich-harris)
-- [Podcast: Svelte mit Vanessa Bohner](https://deutschepodcasts.de/podcast/mobilfunk-der-mobile-development-podcast/folge-64-svelte-mit-vanessa-bohner)
-- [Back/Forward Cache](https://web.dev/bfcache/)
+- CSS: [The State of CSS](https://2020.stateofcss.com/en-US/)
+- [How to Make Your Code Reviewer Fall in Love with You](https://mtlynch.io/code-review-love/)
+- JS: [The Fantastically Magical handleEvent Function](https://dev.to/rikschennink/the-fantastically-magical-handleevent-function-1bp4)
+- CSS: [Breaking out with CSS Grid explained](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/)
+- Eleventy: [Taking WordPress to Eleventy](https://www.joshcanhelp.com/taking-wordpress-to-eleventy/)
+- CSS: [Centering in CSS](https://web.dev/centering-in-css/)
+- [The Import On Interaction Pattern](https://addyosmani.com/blog/import-on-interaction/)
+- Perf: [Lighthouse-Parade](https://github.com/cloudfour/lighthouse-parade), a Node.js command line tool that crawls a domain and gathers lighthouse performance data for every page. 
+- A11Y: [Accessible SVG Icons](https://css-tricks.com/accessible-svg-icons/)
+- Helper: [Fancy border generator](https://9elements.github.io/fancy-border-radius/#37.51.16.42--)
+- Perf: [Front-End Performance Checklist 2021](https://www.smashingmagazine.com/2021/01/front-end-performance-2021-free-pdf-checklist/)
+- Video: [Is Progressive Enhancement Dead Yet?](https://briefs.video/videos/is-progressive-enhancement-dead-yet/)
+- [The key points of Re-Engineering Legacy Software](https://understandlegacycode.com/blog/key-points-reengineering-legacy-software/)
+- A11Y: [Barrierefreiheit im Internet: Auf diese Probleme stoßen Menschen mit Behinderung - DER SPIEGEL - Netzwelt](https://www.spiegel.de/netzwelt/web/barrierefreiheit-im-internet-auf-diese-probleme-stossen-menschen-mit-behinderung-a-2144f7bf-af51-4869-8b71-e0843996b672)
+- Eleventy: [Blog wieder in neuem Gewand](https://www.marcos-leben.de/blog-wieder-in-neuem-gewand/)
+- A11Y: [W3C Accessibility Guidelines (WCAG) 3.0](https://www.w3.org/TR/wcag-3.0/), draft
+- Video/Perf: [Google Summit: Core Web Vitals](https://www.youtube.com/watch?t=89&v=iNfz9tg-wyg&feature=youtu.be)
+- [Naming Cheatsheet](https://github.com/kettanaito/naming-cheatsheet) cause naming things is hard
+- NPM: [Autocompletion for npm commands](https://docs.npmjs.com/cli/v6/commands/npm-completion)
+- UX: [Laws of UX](https://lawsofux.com/)
+
+## Strittig
+- https://www.gutjahr.biz/2020/12/wir-pfeifen-auf-ihre-privatsphaere/
 
 ## Learn
 ### Basiswissen
@@ -20,6 +37,8 @@
 - Serverless: [Upptime](https://github.com/upptime/upptime) ist eine App für [Github Actions](https://docs.github.com/en/free-pro-team@latest/actions), die wie Gratis-Computer sind, sagt [Chris Coyier](https://css-tricks.com/upptime/)
 - [Learn Eleventy](https://learneleventy.com/)
 - [Design good practices](https://goodpractices.design/) – Guidelines to naming conventions, components structure and document organization.
+- [Web Performance Calendar](https://calendar.perfplanet.com/2020/)
+- [Back/Forward Cache](https://web.dev/bfcache/)
 
 ### Frontend-TV
 - [Chris Ferdinandi: The Lean Web](https://wordpress.tv/2020/10/29/chris-ferdinandi-the-lean-web/), WordCamp Los Angeles 2020, 50min.
@@ -29,9 +48,13 @@
 - [Svelte Tutorial](https://svelte.dev/tutorial/basics)
 - [Svelte's own Codepen](https://svelte.dev/repl/hello-world?version=3.29.0)
 - [Learn Svelte](https://www.youtube.com/watch?v=ogXETl_I0Dg) :tv: 
-- [Svelte Summit 2020](https://www.youtube.com/watch?v=vHHLLJA0b70) :tv: 
+- [Svelte Summit 2020](https://www.youtube.com/watch?v=vHHLLJA0b70) :tv:
+- [Podcast: Svelte mit Vanessa Bohner](https://deutschepodcasts.de/podcast/mobilfunk-der-mobile-development-podcast/folge-64-svelte-mit-vanessa-bohner)
+- [Svelte: First Look (Kurs in Campus Success, Firmenlogin nötig)](https://macmillan.csod.com/ui/lms-learning-details/app/course/0f17adb6-08f1-572b-8f82-e1960b46c8d3)
+- [Podcast: Vue vs. Svelte](https://undefined.fm/radio/vue-vs-svelte-with-evan-you-and-rich-harris)
 
 ## Pens
+- [Emerging Tooltip](https://codepen.io/ainalem/pen/OJRLRPO)
 - Variable Fonts: [Contrast Variable font](https://codepen.io/Sidstumple/pen/MWeXeBg)
 - WebAudioAPI: [The Bluesman](https://codepen.io/gregh/full/zNzvOm)
 
@@ -53,5 +76,4 @@
 - Retro: [Run team retrospectives easily, quickly, and absolutely FREE](https://www.goretro.ai/)
 - Shell: [Zsh + Antigen + Oh my Zsh = A Beautiful, Powerful, and Robust Shell](https://blog.phuctm97.com/zsh-antigen-oh-my-zsh-a-beautiful-powerful-robust-shell) (Moritz hat Einwände dazu…). Nico nutzt: [Oh My ZSH](https://ohmyz.sh/), siehe auch [hier](https://github.com/codecandies/webdevs_mac_install)
 - [Standard JS - JavaScript Standard Style](https://standardjs.com/)
-- [Linkscape](https://inkscape.org/de/) Vectorgrafikporogramm
-
+- [Inkscape](https://inkscape.org/de/) Vectorgrafikporogramm
