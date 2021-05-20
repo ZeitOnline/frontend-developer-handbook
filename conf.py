@@ -12,7 +12,7 @@ html_theme_options = {
     'elasticsearch_host': None,
     'elasticsearch_index': 'docs',
     'editme_link': (
-        'https://github.com/ZeitOnline/frontend-developer-handbook/edit/master/{page}')
+        'https://github.com/ZeitOnline/frontend-developer-handbook/edit/main/{page}')
 }
 html_last_updated_fmt = '%b %d, %Y'
 
