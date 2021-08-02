@@ -195,7 +195,7 @@ Die Teaser-Grids waren fertig, aber es fehlten noch die äußeren Abstände, die
 }
 ```
 
-Bei einigen Teaserausprägungen waren abweichende Abstände gewünscht, für diesen Fall wurden die Teaser-Container mit entsprechenden Modifiern ausgezeichnet.
+Bei einigen Teaserausprägungen sind abweichende Abstände gewünscht, für diesen Fall wurden die Teaser-Container mit entsprechenden Modifiern ausgezeichnet.
 
 ## Ergebnis
 
