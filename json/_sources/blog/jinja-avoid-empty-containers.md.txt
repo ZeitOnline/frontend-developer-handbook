@@ -79,6 +79,18 @@ You can do the same check for blocks as well, but I prefer the cleaner way of ha
 {% endif %}
 ```
 
+## The best solution: require
+
+If the content can be set wit a simple statement like `super()` or a template filter or macro, we can make use of the require function.
+
+```jinja
+{%- require news_header_image = super() | trim -%}
+    <div class="news-header__image">
+        {{ news_header_image }}
+    </div>
+{% endrequire %}
+```
+
 ## Resources
 
 * [Block Assignments in Jinja2](http://jinja.pocoo.org/docs/2.10/templates/#block-assignments)

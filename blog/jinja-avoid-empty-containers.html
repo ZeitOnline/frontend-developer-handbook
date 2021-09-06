@@ -246,6 +246,17 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="the-best-solution-require">
+<h2>The best solution: require<a class="headerlink" href="#the-best-solution-require" title="Permalink to this headline">¶</a></h2>
+<p>If the content can be set wit a simple statement like <code class="docutils literal notranslate"><span class="pre">super()</span></code> or a template filter or macro, we can make use of the require function.</p>
+<div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span>- <span class="k">require</span> <span class="nv">news_header_image</span> <span class="o">=</span> <span class="nb">super</span><span class="o">()</span> <span class="o">|</span> <span class="nf">trim</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;div class=&quot;news-header__image&quot;&gt;</span>
+<span class="x">        </span><span class="cp">{{</span> <span class="nv">news_header_image</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">    &lt;/div&gt;</span>
+<span class="cp">{%</span> <span class="k">endrequire</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -272,7 +283,7 @@
     <p>
         &#169; Copyright ZEIT ONLINE.
       <span class="lastupdated">
-        Last updated on Jun 02, 2021.
+        Last updated on Sep 06, 2021.
       </span>
 
     </p>
