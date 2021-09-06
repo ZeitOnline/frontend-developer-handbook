@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Small Wins: Avoid empty containers in Jinja &mdash; Frontend Developer Handbook  documentation</title>
+  <title>Small Wins: Avoid empty container in Jinja &mdash; Frontend Developer Handbook  documentation</title>
   
 
   
@@ -155,7 +155,7 @@
         
           <li><a href="index.html">ZEIT ONLINE Developer Blog</a> &raquo;</li>
         
-      <li>Small Wins: Avoid empty containers in Jinja</li>
+      <li>Small Wins: Avoid empty container in Jinja</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -174,11 +174,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="small-wins-avoid-empty-containers-in-jinja">
-<h1>Small Wins: Avoid empty containers in Jinja<a class="headerlink" href="#small-wins-avoid-empty-containers-in-jinja" title="Permalink to this headline">¶</a></h1>
-<p>At ZEIT ONLINE, our teasers and articles are composed of many parts like subtemplates and macros. Each component might be hidden under certain conditions. If all content of a wrapper element is hidden, we want to avoid rendering empty containers. A lesser-known Jinja feature helps us with that.</p>
-<div class="section" id="the-problem-empty-containers">
-<h2>The problem: empty containers<a class="headerlink" href="#the-problem-empty-containers" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="small-wins-avoid-empty-container-in-jinja">
+<h1>Small Wins: Avoid empty container in Jinja<a class="headerlink" href="#small-wins-avoid-empty-container-in-jinja" title="Permalink to this headline">¶</a></h1>
+<p>At ZEIT ONLINE, our teasers and articles are composed of many parts like subtemplates and macros. Each component might be hidden under certain conditions. If all content of a wrapper element is hidden, we want to avoid rendering empty container. A lesser-known Jinja feature helps us with that.</p>
+<div class="section" id="the-problem-empty-container">
+<h2>The problem: empty container<a class="headerlink" href="#the-problem-empty-container" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="x">&lt;div class=&quot;metadata&quot;&gt;</span>
 <span class="x">  </span><span class="cp">{%</span> <span class="k">include</span> <span class="s1">&#39;byline.html&#39;</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">  </span><span class="cp">{{</span> <span class="nv">macro.include_datetime</span><span class="o">(</span><span class="nv">teaser</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>

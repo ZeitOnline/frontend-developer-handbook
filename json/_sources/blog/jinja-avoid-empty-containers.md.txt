@@ -1,8 +1,8 @@
-# Small Wins: Avoid empty containers in Jinja
+# Small Wins: Avoid empty container in Jinja
 
-At ZEIT ONLINE, our teasers and articles are composed of many parts like subtemplates and macros. Each component might be hidden under certain conditions. If all content of a wrapper element is hidden, we want to avoid rendering empty containers. A lesser-known Jinja feature helps us with that.
+At ZEIT ONLINE, our teasers and articles are composed of many parts like subtemplates and macros. Each component might be hidden under certain conditions. If all content of a wrapper element is hidden, we want to avoid rendering empty container. A lesser-known Jinja feature helps us with that.
 
-## The problem: empty containers
+## The problem: empty container
 
 ```jinja
 <div class="metadata">
