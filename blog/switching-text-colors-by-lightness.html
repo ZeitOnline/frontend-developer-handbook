@@ -1,60 +1,32 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Switching text colors in subject to its background color lightness &mdash; Frontend Developer Handbook  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/zon.css" type="text/css" />
-
-  
-  
-    <link rel="shortcut icon" href="../_static/zon.ico"/>
-  
-
-  
-  
-
-  
-
-  
+  <title>Switching text colors in subject to its background color lightness &mdash; Frontend Developer Handbook  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/zon.css" type="text/css" /><link rel="shortcut icon" href="../_static/zon.ico"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Small Wins: Improving our Document Outline" href="document-outline.html" />
     <link rel="prev" title="Small Wins: Avoid empty container in Jinja" href="jinja-avoid-empty-containers.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 <a href="../toc.html">
 <img src="../_static/zon.png" class="logo" alt="Logo"/>
  Frontend Developer Handbook
@@ -69,17 +41,8 @@
   </form>
 </div>
 
-        </div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
 
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-
-            
-            
-              
-            
-            
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">🏠️ Home</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">✍️ Blog</a><ul class="current">
@@ -93,15 +56,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../links/index.html">🌍️ Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../practices/index.html">👩‍🏫 Practices</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Guidelines</span></p>
+<p><span class="caption-text">Guidelines</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../javascript/guidelines.html">ZEIT ONLINE JS Coding Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jinja/coding-guidelines.html">ZEIT ONLINE Jinja Coding Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sass/guidelines.html">ZEIT ONLINE SASS Coding Guidelines</a></li>
 </ul>
 
-            
-          
 
 
 <ul style="margin-top: 2em">
@@ -110,71 +71,31 @@
 
 
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../toc.html">Frontend Developer Handbook</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../toc.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">ZEIT ONLINE Developer Blog</a> &raquo;</li>
-        
       <li>Switching text colors in subject to its background color lightness</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/blog/switching-text-colors-by-lightness.md.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="switching-text-colors-in-subject-to-its-background-color-lightness">
+             
+  <section id="switching-text-colors-in-subject-to-its-background-color-lightness">
 <h1>Switching text colors in subject to its background color lightness<a class="headerlink" href="#switching-text-colors-in-subject-to-its-background-color-lightness" title="Permalink to this headline">¶</a></h1>
 <p>Sometimes you build a feature with the feeling, there is something that can go wrong afterwards. In this case we built a CMS feature where the editor could decide more or less about the background color of a part of the website. This poses in our thinking a threat to the accessibility of the foreground text, falling behind in contrast in the best case, being completely unreadable in the worst case. No user would certainly choose a black background with black text on it, but what about some of the so loved shades of gray? So… we looked for a solution to change text colors automatically.</p>
 <p>What we found was <a class="reference external" href="https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/">Switch font color for different backgrounds with CSS</a> over at CSS-Tricks, which uses css variables (and a css math coding trick from hell to achieve conditional statements) to change text colors in subject to its background. But the article also led to the <a class="reference external" href="https://www.w3.org/TR/AERT/#color-contrast">Techniques For Accessibility Evaluation And Repair Tools Working Draft</a> of the W3C, which includes an equation to estimate <em>perceived lightness</em> of colors.</p>
@@ -229,80 +150,62 @@
 </pre></div>
 </div>
 <p>Based on the CSS-Tricks method there is <a class="reference external" href="https://codepen.io/codecandies/pen/QYQLZb/">a codepen</a> to demonstrate the outcome.</p>
-<div class="section" id="resources">
+<section id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="articles">
+<section id="articles">
 <h3>Articles<a class="headerlink" href="#articles" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://css-tricks.com/switch-font-color-for-different-backgrounds-with-css/">Switch font color for different backgrounds with CSS</a></p></li>
 </ul>
-</div>
-<div class="section" id="webstandards">
+</section>
+<section id="webstandards">
 <h3>Webstandards<a class="headerlink" href="#webstandards" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.w3.org/TR/AERT/#color-contrast">Techniques For Accessibility Evaluation And Repair Tools Working Draft</a></p></li>
 </ul>
-</div>
-<div class="section" id="tools">
+</section>
+<section id="tools">
 <h3>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/mozilla-services/axe-selenium-python">axe-selenium-python</a></p></li>
 <li><p><a class="reference external" href="https://docs.pytest.org/en/latest/">pytest</a></p></li>
 </ul>
 <p><em>Written 2019-03-07, Nico Brünjes</em></p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="document-outline.html" class="btn btn-neutral float-right" title="Small Wins: Improving our Document Outline" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="jinja-avoid-empty-containers.html" class="btn btn-neutral float-left" title="Small Wins: Avoid empty container in Jinja" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="document-outline.html" class="btn btn-neutral float-right" title="Small Wins: Improving our Document Outline" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright ZEIT ONLINE.
-      <span class="lastupdated">
-        Last updated on Sep 06, 2021.
-      </span>
-
-    </p>
+    <p>&#169; Copyright ZEIT ONLINE.
+      <span class="lastupdated">Last updated on Dec 14, 2021.
+      </span></p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

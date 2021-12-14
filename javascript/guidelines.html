@@ -1,60 +1,32 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>ZEIT ONLINE JS Coding Guidelines &mdash; Frontend Developer Handbook  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/zon.css" type="text/css" />
-
-  
-  
-    <link rel="shortcut icon" href="../_static/zon.ico"/>
-  
-
-  
-  
-
-  
-
-  
+  <title>ZEIT ONLINE JS Coding Guidelines &mdash; Frontend Developer Handbook  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/zon.css" type="text/css" /><link rel="shortcut icon" href="../_static/zon.ico"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ZEIT ONLINE Jinja Coding Guidelines" href="../jinja/coding-guidelines.html" />
     <link rel="prev" title="How we use and conduct pull requests and peer code reviews" href="../practices/peer-code-reviews.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 <a href="../toc.html">
 <img src="../_static/zon.png" class="logo" alt="Logo"/>
  Frontend Developer Handbook
@@ -69,17 +41,8 @@
   </form>
 </div>
 
-        </div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
 
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-
-            
-            
-              
-            
-            
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">🏠️ Home</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blog/index.html">✍️ Blog</a></li>
@@ -87,15 +50,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../links/index.html">🌍️ Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../practices/index.html">👩‍🏫 Practices</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Guidelines</span></p>
+<p><span class="caption-text">Guidelines</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ZEIT ONLINE JS Coding Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jinja/coding-guidelines.html">ZEIT ONLINE Jinja Coding Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sass/guidelines.html">ZEIT ONLINE SASS Coding Guidelines</a></li>
 </ul>
 
-            
-          
 
 
 <ul style="margin-top: 2em">
@@ -104,79 +65,40 @@
 
 
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../toc.html">Frontend Developer Handbook</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../toc.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>ZEIT ONLINE JS Coding Guidelines</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/javascript/guidelines.md.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="zeit-online-js-coding-guidelines">
+             
+  <section id="zeit-online-js-coding-guidelines">
 <h1>ZEIT ONLINE JS Coding Guidelines<a class="headerlink" href="#zeit-online-js-coding-guidelines" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="notation">
+<section id="notation">
 <h2>Notation<a class="headerlink" href="#notation" title="Permalink to this headline">¶</a></h2>
 <p>All functions and variables should be named in CamelCase (eg. “doCounting”).<br />A function name should include an action and a noun (eg. “countNumber”), if the return value is in boolean the action should be “has” (eg. “hasNumber”).</p>
-</div>
-<div class="section" id="indentation">
+</section>
+<section id="indentation">
 <h2>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h2>
 <p>We use soft tabs (1 tab = 4 spaces) for indentation.</p>
-</div>
-<div class="section" id="whitespace">
+</section>
+<section id="whitespace">
 <h2>Whitespace<a class="headerlink" href="#whitespace" title="Permalink to this headline">¶</a></h2>
 <p>General use:</p>
 <ul class="simple">
@@ -193,8 +115,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="whitespace-exceptions">
+</section>
+<section id="whitespace-exceptions">
 <h2>Whitespace Exceptions<a class="headerlink" href="#whitespace-exceptions" title="Permalink to this headline">¶</a></h2>
 <p>There are some exceptions to the whitespacing policy:</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Function with a callback, object, or array as the sole argument:</span>
@@ -220,8 +142,8 @@
 <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;&lt;div class=&quot;myclass&quot;&gt;&lt;/div&gt;&#39;</span> <span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="format">
+</section>
+<section id="format">
 <h2>Format<a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>use curly brackets to form blocks of code</p></li>
@@ -251,8 +173,8 @@
 <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;&lt;div class=&quot;myclass&quot;&gt;&lt;/div&gt;&#39;</span> <span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="comparisons">
+</section>
+<section id="comparisons">
 <h2>Comparisons<a class="headerlink" href="#comparisons" title="Permalink to this headline">¶</a></h2>
 <p>For comparisons use:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="p">:</span> <span class="n">typeof</span> <span class="nb">object</span> <span class="o">===</span> <span class="s2">&quot;string&quot;</span>  
@@ -270,26 +192,26 @@
 <span class="n">Properties</span><span class="p">:</span> <span class="nb">object</span><span class="o">.</span><span class="n">prop</span> <span class="o">===</span> <span class="n">undefined</span>  
 </pre></div>
 </div>
-</div>
-<div class="section" id="when-to-use-attributes-data-attributes-and-js-classes">
+</section>
+<section id="when-to-use-attributes-data-attributes-and-js-classes">
 <h2>When to use attributes, data-attributes and <code class="docutils literal notranslate"><span class="pre">js-</span></code> classes<a class="headerlink" href="#when-to-use-attributes-data-attributes-and-js-classes" title="Permalink to this headline">¶</a></h2>
 <p>General use: whenever possible use HTML Attributes.</p>
-<div class="section" id="js-classes">
+<section id="js-classes">
 <h3><code class="docutils literal notranslate"><span class="pre">js-</span></code> classes<a class="headerlink" href="#js-classes" title="Permalink to this headline">¶</a></h3>
 <p>Use those prefixed classes only, if there are no styles bound to the element.
 This helps with refactoring, to ensure the class is not removed because it contains no styles.
 <strong>Therefore: Do not style classes prefixed with <code class="docutils literal notranslate"><span class="pre">js-</span></code></strong></p>
-</div>
-<div class="section" id="data-attributes">
+</section>
+<section id="data-attributes">
 <h3>data-attributes<a class="headerlink" href="#data-attributes" title="Permalink to this headline">¶</a></h3>
 <p>We use data-attributes for nearly anything.
 They might trigger js or contain some styles.
 General rule of thumb is applied when using data-attributes.
 To add an attribute use <code class="docutils literal notranslate"><span class="pre">element.dataset.attribute</span> <span class="pre">=</span> <span class="pre">true;</span></code>.
 To remove them use <code class="docutils literal notranslate"><span class="pre">delete</span> <span class="pre">element.dataset.attribute;</span></code>.</p>
-</div>
-</div>
-<div class="section" id="import-order">
+</section>
+</section>
+<section id="import-order">
 <h2>Import order<a class="headerlink" href="#import-order" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>optional style files</p></li>
@@ -297,14 +219,14 @@ To remove them use <code class="docutils literal notranslate"><span class="pre">
 <li><p><code class="docutils literal notranslate"><span class="pre">web.core</span></code> js files</p></li>
 <li><p>js files from current vertical</p></li>
 </ol>
-</div>
-<div class="section" id="components">
+</section>
+<section id="components">
 <h2>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h2>
 <p>We consider anything which is purely JS based as a component.
 This contains JS needed for initialization, HTML Files and Styles. These should be stored <code class="docutils literal notranslate"><span class="pre">/javascript/web.core/components/ComponentName</span></code>.
 Each Component should at least contain a <code class="docutils literal notranslate"><span class="pre">index.mjs</span></code>, <code class="docutils literal notranslate"><span class="pre">style.sass</span></code> and <code class="docutils literal notranslate"><span class="pre">template.html</span></code>.</p>
-</div>
-<div class="section" id="documentation">
+</section>
+<section id="documentation">
 <h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
 <p>Use <a class="reference external" href="http://usejsdoc.org/">JsDoc Style</a> to describe functions.</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
@@ -316,58 +238,40 @@ Each Component should at least contain a <code class="docutils literal notransla
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../jinja/coding-guidelines.html" class="btn btn-neutral float-right" title="ZEIT ONLINE Jinja Coding Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../practices/peer-code-reviews.html" class="btn btn-neutral float-left" title="How we use and conduct pull requests and peer code reviews" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../jinja/coding-guidelines.html" class="btn btn-neutral float-right" title="ZEIT ONLINE Jinja Coding Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright ZEIT ONLINE.
-      <span class="lastupdated">
-        Last updated on Sep 06, 2021.
-      </span>
-
-    </p>
+    <p>&#169; Copyright ZEIT ONLINE.
+      <span class="lastupdated">Last updated on Dec 14, 2021.
+      </span></p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

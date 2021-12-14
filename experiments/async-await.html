@@ -1,60 +1,32 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Async Await &mdash; Frontend Developer Handbook  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/zon.css" type="text/css" />
-
-  
-  
-    <link rel="shortcut icon" href="../_static/zon.ico"/>
-  
-
-  
-  
-
-  
-
-  
+  <title>Async Await &mdash; Frontend Developer Handbook  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/zon.css" type="text/css" /><link rel="shortcut icon" href="../_static/zon.ico"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Babel and our supported browserlist" href="babel-browserlist.html" />
     <link rel="prev" title="Experiments" href="index.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 <a href="../toc.html">
 <img src="../_static/zon.png" class="logo" alt="Logo"/>
  Frontend Developer Handbook
@@ -69,17 +41,8 @@
   </form>
 </div>
 
-        </div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
 
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-
-            
-            
-              
-            
-            
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">🏠️ Home</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blog/index.html">✍️ Blog</a></li>
@@ -91,15 +54,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../links/index.html">🌍️ Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../practices/index.html">👩‍🏫 Practices</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Guidelines</span></p>
+<p><span class="caption-text">Guidelines</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../javascript/guidelines.html">ZEIT ONLINE JS Coding Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jinja/coding-guidelines.html">ZEIT ONLINE Jinja Coding Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sass/guidelines.html">ZEIT ONLINE SASS Coding Guidelines</a></li>
 </ul>
 
-            
-          
 
 
 <ul style="margin-top: 2em">
@@ -108,89 +69,49 @@
 
 
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../toc.html">Frontend Developer Handbook</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../toc.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">Experiments</a> &raquo;</li>
-        
       <li>Async Await</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/experiments/async-await.md.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="async-await">
+             
+  <section id="async-await">
 <h1>Async Await<a class="headerlink" href="#async-await" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="userstory">
+<section id="userstory">
 <h2>Userstory<a class="headerlink" href="#userstory" title="Permalink to this headline">¶</a></h2>
 <p>As a developer I’d like to use asynchronous functions within my javascript modules, to prevent unnecessary chaining of promises.</p>
-</div>
-<div class="section" id="what-is-async-await">
+</section>
+<section id="what-is-async-await">
 <h2>What is async/await?<a class="headerlink" href="#what-is-async-await" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>An async function can contain an await expression, that pauses the execution of the function and waits for the passed Promise’s resolution, and then resumes the async function’s execution and returns the resolved value. You can think of a Promise in JavaScript as the equivalent of Java’s Future or C# ‘s Task. <a class="reference external" href="https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5?gi=92f3b9fc7172">Source</a></p>
 </div></blockquote>
-</div>
-<div class="section" id="but-why-though">
+</section>
+<section id="but-why-though">
 <h2>But why though?<a class="headerlink" href="#but-why-though" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>Yes, you read that right. The V8 team made improvements that make async/await functions run faster than traditional promises in the JavaScript engine. 12.05.2019. <a class="reference external" href="https://itnext.io/javascripts-async-await-versus-promise-the-great-debate-6308cb2e10b3">Source</a></p>
 </div></blockquote>
-</div>
-<div class="section" id="status-quo-with-the-easyembeds-as-an-example">
+</section>
+<section id="status-quo-with-the-easyembeds-as-an-example">
 <h2>Status Quo with the easyEmbeds as an example<a class="headerlink" href="#status-quo-with-the-easyembeds-as-an-example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript= notranslate"><div class="highlight"><pre><span></span>posts.forEach( post =&gt; {
     [...]
@@ -210,8 +131,8 @@
 });
 </pre></div>
 </div>
-</div>
-<div class="section" id="code-using-async-await">
+</section>
+<section id="code-using-async-await">
 <h2>Code using async/await<a class="headerlink" href="#code-using-async-await" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript= notranslate"><div class="highlight"><pre><span></span>posts.forEach( async post =&gt; {
     [...]
@@ -228,16 +149,16 @@
 });
 </pre></div>
 </div>
-</div>
-<div class="section" id="result">
+</section>
+<section id="result">
 <h2>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Babel ensures automatically, that the code is compatible with all defined browsers.</p></li>
 <li><p>Filesize <strong>before</strong>: ~ 3KB</p></li>
 <li><p>Filesize <strong>after</strong>: ~ 10KB</p></li>
 </ul>
-</div>
-<div class="section" id="todo">
+</section>
+<section id="todo">
 <h2>Todo:<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Check if there are any polyfills available</p>
@@ -251,58 +172,40 @@
 </ul>
 </li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="babel-browserlist.html" class="btn btn-neutral float-right" title="Babel and our supported browserlist" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="Experiments" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="babel-browserlist.html" class="btn btn-neutral float-right" title="Babel and our supported browserlist" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright ZEIT ONLINE.
-      <span class="lastupdated">
-        Last updated on Sep 06, 2021.
-      </span>
-
-    </p>
+    <p>&#169; Copyright ZEIT ONLINE.
+      <span class="lastupdated">Last updated on Dec 14, 2021.
+      </span></p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
