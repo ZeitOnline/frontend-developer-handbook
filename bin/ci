@@ -7,7 +7,7 @@ case $COMMAND in
     docs)
         bin/docs html
         bin/docs elasticsearch
-        ln -sfT ${WORKSPACE}/docs.zeit.de.conf $HOME/nginx.d/frontend-developer-handbook.conf
+        ln -sfT ${WORKSPACE}/docs/docs.zeit.de.conf $HOME/nginx.d/frontend-developer-handbook.conf
         sudo /etc/init.d/nginx reload
 
         rm -rf /tmp/frontend-developer-handbook
