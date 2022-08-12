@@ -1,0 +1,53 @@
+name: Build GH-Pages
+
+on:
+  push:
+    paths:
+      - 'docs/**'
+
+
+jobs:
+  build:
+    name: Build docs
+    runs-on: [self-hosted,linux]
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: build
+        run: bin/docs/hmtl
+
+      - name: upload html
+        uses: actions/upload-artifact@v3
+        with:
+          name: html
+          path: docs/htdocs
+
+  commit:
+    name: Commit GH-Pages
+    runs-on: [self-hosted,linux]
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+
+      - name: clear workdir
+        run: rm -rf *
+
+      - name: download html
+        uses: actions/download-artifact@v3
+        with:
+          name: html
+          path: ./
+
+      - run: touch .nojekyll
+
+      - name: auto-commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Publish
+
+
