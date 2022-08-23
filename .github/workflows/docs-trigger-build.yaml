@@ -18,5 +18,5 @@ jobs:
           token: ${{ secrets.PRIVATE_REPO_ACCESS_PAT }}
           repository: ZeitOnline/docs
           event-type: module-commit
-          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+          client-payload: '{"repo": "${{ github.repository }}", "ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
 
