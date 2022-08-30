@@ -14,8 +14,9 @@ case $COMMAND in
     serve)
         docker run --rm \
           -v $(pwd)/:/docs/ \
+          -p 8000:8000 \
           europe-west3-docker.pkg.dev/zeitonline-engineering/docker-zon/sphinx-zon:latest \
-          sphinx-autobuild -j auto -a -b html . ./htdocs
+          sphinx-autobuild --host 0.0.0.0 -j auto -a -b html . ./htdocs
     ;;
     *)
         echo "Unrecognized command: $COMMAND"
